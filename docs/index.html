@@ -1,150 +1,156 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="utf-8" />
-<!--Non uso meta viewport dato che non ho mediaquery-->
-    <title>Sito base Nicola Ciaco</title>
-    <link rel="stylesheet" href="src/css/main.css">
-</head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS jQuery Prova Pratica</title>
+   <link rel="stylesheet" href="src/css/main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="src/js/maradona.js"></script>
 
+</head>
 <body>
 
+   <header class="intestazione">
+      <div class="maradona-logo-wrapper" aria-label="Logo">
+         <div class="maradona-logo" aria-label="Logo header"></div>
+         <div aria-label="Logo contain" class="maradona-logo-contain">
+            <span>D</span><span>1</span><span>0</span><span>S</span>
+         </div>
+      </div>
+      <div class="hamburger-menu" aria-label="apri-menu"></div>
+   </header>
 
+   <nav class="sidebar clearfix">
+      <div class="arrow-close">
+         <svg width="21" height="21"><g fill="#FFF" fill-rule="evenodd"><path d="M.368 18.717L18.753.332l1.414 1.415L1.782 20.13z"></path><path d="M1.782.869l18.385 18.384-1.414 1.415L.368 2.283z"></path></g></svg>
+      </div>
 
-	<header id="main-header">
-    
-        <div class="content"> <!--wrapper-->
-            <div class="content-wrapper"> <!--content-wrapper-->
-        
-            <div id="logo">
-                <img src="multimedia/img/logo.png" />
-                <h1>HTML e CSS Template</h1>
+      <ul>
+         <li><a href='#origini'>Le origini</a></li>
+         <li><a href='#gol'>I gol</a></li>
+         <li><a href='#capopolo'>Capopolo</a></li>
+         <li><a href='#vizi'>Genio e sregolatezza</a></li>
+         <li><a href='#mito'>Il mito</a></li>
+      </ul>
+   </nav>
+
+   <main>
+      <div class="separatore"></div>
+
+      <section id="origini">
+         <div class="section">
+            <div class="caption">
+               <span class="section-text-caption">Le Origini</span>
             </div>
-            
-            <nav id="navbar" class="clearfix">
-            
-                <ul>
-                    <li><a href="#">L'HTML</a></li>
-                    <li><a href="#">I CSS</a></li>
-                    <li><a href="#">Creare un sito</a>
-                        <ul>
-                            <li><a href="#">Template in HTML</a></li>
-                            <li><a href="#">Template HTML5</a></li>
-                            <li><a href="#">Template Responsive</a></li>
-                            <li><a href="#">Template per Worpress</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">News</a>
-                        <ul>
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Web Development</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contatti</a></li>
-                </ul>
-            
-            </nav>
-        </div> <!--chiusura class content-wrapper -->
-        </div> <!--chiusura class content -->
-    
-    </header> <!--chiusura dell'header-->
+         </div>
 
-	
+         <div class="section-content">
+            <h3 class="section-header">Il ragazzo dei barrios</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+              </p>
+        </div>
+      </section>
 
-<main role="main" class="content">
-    <section id="principale" class="clearfix">
-    
-        
-            <div id="contenuto">
-        
-            <article class="clearfix">
-               
-            <h2>Il WEB DESIGNER</h2>
-            
-               
-            <p>
-        <img src="multimedia/img/img1.jpg" class="imgSX" />
-            Il Web Designer, o Frontend Web Developer, crea l'interfaccia dei siti web, ovvero tutto ciò che interagisce con occhi e mani degli utenti: usabilità, accessibilità e user experience finale.</p>
-        <p>
-        Un bravo web designer deve conoscere almeno l'HTML, i fogli di stile CSS e il linguaggio Javascript.</p>
-        <p>Con queste competenze è già possibile realizzare gran parte di quello che è visibile oggi in rete.</p>
-        <p>Nel 2004 il W3C, il Consorzio che stabilisce gli standard tecnici per il World Wide Web, ha lanciato le specifiche per l'HTML5, linguaggio che è letteralmente esploso con la nascita dei fogli di stile CSS3.</p>
-        <p>Con questi due nuovi strumenti il web designer può andare oltre i classici CSS e mettere in pratica la potenza dell'HTML5, moltiplicando incredibilmente le potenzialità di sviluppo delle pagine web.</p>
-        <p>Se poi il web designer impara anche il Responsive Web Design, al fine di realizzare siti web ottimizzati anche per Tablet e Smartphone, avrà un profilo completo e competitivo.</p>
-            
-        
-            </article> <!--chiusura dell'articolo-->
-        
-        
-            <article class="clearfix">
-               
-            <h2>Il WEB DEVELOPER</h2>
-            
-            
-        <img src="multimedia/img/img2.jpg" class="imgDX" />    
-            <p>Il Web Developer, o server side web developer, si occupa della creazione di applicazioni Web lato server, necessarie alla generazione dei contenuti per il Web e alla gestione delle interazioni dell'utente con il web (acquisti in rete, registrazione di dati personali e login, invio di newsletter...).</p>
-            <p>Il web developer (o programmatore web) crea e/o contribuisce alla creazione di applicazioni web utilizzando linguaggi di programmazione server side: il suo lavoro inzia dove finisce quello del web designer.</p>
-        <p>I linguaggi di programmazione sono tantissimi e spesso i fanatici del web si sfidano per dimostrare quale sia il migliore.</p>
-        <p>LABFORTRAINING ha scelto il PHP e il database MySql perché sono abbastanza intuitivi, completamente liberi da copyright (open source) e molto richiesti nel mercato del lavoro.</p>
-        <p>Oltre al PHP, il web developer deve conoscere linguaggi come HTML, CSS, Javascript, jQuery e Ajax.</p>
-        
-            
-        
-            </article> <!--chiusura dell'articolo-->    
-        
-        
-            
-        </div> <!--chiusura #contenuto-->
-    
-   
+      <section id="gol">
+         <div class="section">
+            <div class="caption">
+               <span class="section-text-caption">I gol</span>
+            </div>
+         </div>
 
-        <!--role="complementary" sarebbe ridondanteQuando ci sono due aside è bene avere arialabel che li distingue-->
-           
-        
-        <aside id="correlati" aria-label="Menu laterale">
-            <h3>Notizie correlate</h3>
-            <ul>
-                	<li class="uno"><a href="#">HTML 5 e CSS3: le novità del Web Design</a></li>
-                	<li class="due"><a href="#">PHP: il linguaggio di programmazione più famoso al mondo</a></li>
-                	<li class="tre"><a href="#">Javascript: programmare i tuoi siti web per il client</a></li>
-                	<li class="quattro"><a href="#">Responsive Template: i siti web e gli smartphone</a></li>
-            </ul>
-        </aside>
+         <div class="section-content">
+            <h3 class="section-header">Il gol del secolo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+              </p>
+        </div>
+      </section>
 
+      <section id="capopolo">
+         <div class="section">
+            <div class="caption">
+               <span class="section-text-caption">Un capopolo</span>
+            </div>
+         </div>
 
+         <div class="section-content">
+            <h3 class="section-header">Cheguevara 2.0</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+              </p>
+        </div>
+      </section>
 
-</section>
-    
-<aside id="sponsor"   aria-label="Sponsor e partner">
-        <h3>I nostri partner</h3>
-        
-        <ul class="clearfix">
-        	<li>
-            	<a href="#" class="partner1"></a>
-            </li>
-            <li>
-            	<a href="#" class="partner2"></a>
-            </li>                    
-            <li>
-            	<a href="#" class="partner3"></a>
-            </li>
-        </ul>        
-        
-    </aside>
+      <section id="vizi">
+         <div class="section">
+            <div class="caption">
+               <span class="section-text-caption">Genio e sregolatezza</span>
+            </div>
+         </div>
 
+         <div class="section-content">
+            <h3 class="section-header">I demoni del campione</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                 dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                 Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                 seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                  Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                 , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
+                 dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
+                 Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
+                 seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
+                  Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
+                 , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
+               </p>
+         </div>
+      </section>
 
-</main> <!--chiusura main-->
+      <section id="mito"></section>
 
+      
+   </main>
 
-<footer role="contentinfo" id="main-footer">
-    <section class="content"> <!--wrapper-->
-        <ul>
-            <li>Questo sito è stato realizzato da Nicola Ciaco, durante il corso HTML5 e CSS3 <a href="http://www.labfortraining.it" target="_blank">LABFORTRAINING</a></li>
-            <li>&copy; Copyright 2020</li>
-       </ul>    
-    </section> 
-</footer>
-
-
+   <div role= "button" aria-label="Torna-Su"></div>
 </body>
 </html>
