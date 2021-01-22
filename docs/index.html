@@ -1,156 +1,142 @@
-<!DOCTYPE html>
-<html lang="it">
+<!doctype html>
+
+<html>
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>JS jQuery Prova Pratica</title>
-   <link rel="stylesheet" href="src/css/main.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="src/js/maradona.js"></script>
+
+  <title>Responsive Layout</title>
+  
+  <link rel="stylesheet" href="barraDiMenuElastica_Snippet.css" />
+ 
+  <!-- <link rel="stylesheet" href="print.css" media="print" /> -->
+    
+  <meta name="viewport" content="width=device-width">
+
+  <!-- <script type="text/javascript">
+    var caricaFoto = function() {
+    document.querySelector("#hero").innerHTML="<img src='big.jpg'>";
+    //alert('CIAO')
+    };
+    
+    var caricaFoto2 = function() {
+    document.querySelector("#hero").innerHTML="<img src='small.jpg'>";
+    };
+    
+    var caricaFotoTablet = function() {
+    document.querySelector("#hero").innerHTML="<img src='medium.jpg'>";
+    };
+    </script> -->
+
+    <script src="snippet.js"></script>
 
 </head>
+
 <body>
 
-   <header class="intestazione">
-      <div class="maradona-logo-wrapper" aria-label="Logo">
-         <div class="maradona-logo" aria-label="Logo header"></div>
-         <div aria-label="Logo contain" class="maradona-logo-contain">
-            <span>D</span><span>1</span><span>0</span><span>S</span>
-         </div>
+  <div id="header">
+    <div class="inner">
+	
+      <h2>Header <a href="#">Indietro</a></h2>
+
+    </div>
+  </div>
+
+  <div id="hero" class="pageBody">
+  </div>
+
+  <nav class="pageBody clearfix">
+
+    <input type="checkbox" id="hamburger-element">
+       <label for="hamburger-element"></label>
+     <ul>
+      <!-- <li><a href="#">Menu</a></li> -->
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Corsi</a></li>
+      <li><a href="#">Open Day</a></li>
+      <li><a href="#">Contatti</a></li>
+     </ul>
+  </nav>
+
+  
+
+  <div class="pageBody">
+ 
+    <div id="nav">
+    	<ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Friends</a></li>
+    	</ul>
+    </div>
+
+    
+
+    <div id="content">			
+      <div class="inner">
+			
+        <h1>Responsive Layout</h1>
+          
+        <img src="tim-cup.png">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          
+        <img src="roma.jpg" >
+
+        <p>Curabitur et leo dui, eu semper tellus. Vivamus aliquam, mi ultrices fringilla varius, augue nisl tincidunt elit, eu tincidunt ante metus ac mauris. Praesent congue blandit nunc, eu facilisis ligula faucibus sit amet. Proin eget turpis nulla. Phasellus mattis nisi a ante aliquet posuere. Vestibulum tortor quam, luctus imperdiet venenatis nec, molestie eu massa. Vivamus nec ipsum viverra augue aliquet bibendum. Morbi ac felis purus, sed vehicula mauris. Integer tempor mollis libero id hendrerit. Fusce sit amet urna quis justo varius pulvinar dapibus sed metus.</p>
+
+        <p>Ut vel mauris eu velit fringilla lobortis. Phasellus accumsan sem in nisl luctus gravida. Vestibulum vitae scelerisque eros. Nullam id leo erat, et congue elit. Nunc volutpat justo tempor magna pretium adipiscing. Vivamus eget massa odio. Suspendisse potenti. Aliquam erat volutpat. Proin faucibus leo vel sem lobortis sed hendrerit diam suscipit. Maecenas dignissim, neque sit amet tristique pulvinar, ipsum orci porttitor odio, ac auctor nunc mauris ac nisi. Sed vitae dui et urna mollis elementum et id purus. Suspendisse bibendum quam id lacus condimentum ut pharetra orci mollis. Curabitur et consequat nisi. Suspendisse dictum luctus neque, id tincidunt justo rutrum non. Aenean fringilla quam ac magna ornare vehicula.</p>
+
       </div>
-      <div class="hamburger-menu" aria-label="apri-menu"></div>
-   </header>
+    </div>
 
-   <nav class="sidebar clearfix">
-      <div class="arrow-close">
-         <svg width="21" height="21"><g fill="#FFF" fill-rule="evenodd"><path d="M.368 18.717L18.753.332l1.414 1.415L1.782 20.13z"></path><path d="M1.782.869l18.385 18.384-1.414 1.415L.368 2.283z"></path></g></svg>
-      </div>
+    <div id="sidebar">
+    	<div class="inner">
+			
+        <h2>Sidebar</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate 
+        velit esse cillum dolore eu fugiat nulla pariatur. 
+        Morbi ac felis purus, sed vehicula mauris.</p>
 
-      <ul>
-         <li><a href='#origini'>Le origini</a></li>
-         <li><a href='#gol'>I gol</a></li>
-         <li><a href='#capopolo'>Capopolo</a></li>
-         <li><a href='#vizi'>Genio e sregolatezza</a></li>
-         <li><a href='#mito'>Il mito</a></li>
-      </ul>
-   </nav>
+        <h2>Contact Us</h2>
+        <p>Morbi ac felis purus, sed vehicula mauris.</p>
 
-   <main>
-      <div class="separatore"></div>
+      	</div>
+    </div>
 
-      <section id="origini">
-         <div class="section">
-            <div class="caption">
-               <span class="section-text-caption">Le Origini</span>
-            </div>
-         </div>
+  </div>
 
-         <div class="section-content">
-            <h3 class="section-header">Il ragazzo dei barrios</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-              </p>
-        </div>
-      </section>
+  <div id="footer">
+    <div class="inner">
+      <h3>Footer</h3>
+    </div>
+  </div>
 
-      <section id="gol">
-         <div class="section">
-            <div class="caption">
-               <span class="section-text-caption">I gol</span>
-            </div>
-         </div>
+<!-- Carica la foto grande se la finestra è larga più di 768px -->
+<!-- <script type="text/javascript">
 
-         <div class="section-content">
-            <h3 class="section-header">Il gol del secolo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-              </p>
-        </div>
-      </section>
-
-      <section id="capopolo">
-         <div class="section">
-            <div class="caption">
-               <span class="section-text-caption">Un capopolo</span>
-            </div>
-         </div>
-
-         <div class="section-content">
-            <h3 class="section-header">Cheguevara 2.0</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                 Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-              </p>
-        </div>
-      </section>
-
-      <section id="vizi">
-         <div class="section">
-            <div class="caption">
-               <span class="section-text-caption">Genio e sregolatezza</span>
-            </div>
-         </div>
-
-         <div class="section-content">
-            <h3 class="section-header">I demoni del campione</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                 dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                 Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                 seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                  Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                 , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ad quidem autem iure. Voluptatum quasi quaerat magnam assumenda ducimus sit
-                 dolor explicabo perspiciatis harum nulla, impedit atque voluptatibus ex ea molestias?
-                 Il brano standard del Lorem Ipsum usato sin dal sedicesimo secolo è riprodotto qui di 
-                 seguito per coloro che fossero interessati. Anche le sezioni 1.10.32 e 1.10.33 del "de Finibus
-                  Bonorum et Malorum" di Cicerone sono riprodotte nella loro forma originale
-                 , accompagnate dalla traduzione inglese del 1914 di H. Rackham.
-               </p>
-         </div>
-      </section>
-
-      <section id="mito"></section>
-
+  cambia();
+  
+  function cambia()
+  {
+  //alert(window.orientation);
       
-   </main>
+  var dim=document.documentElement.clientWidth
+  
+  if ((dim<= 480)&&(window.orientation!=undefined)) {
+    caricaFoto2();
+    }
+    else if((dim > 480)&&(dim<= 768)&&(window.orientation!=undefined)){
+    caricaFotoTablet();
+    }
+    else{
+    caricaFoto();
+    }
+  }
+  
+  </script> -->
 
-   <div role= "button" aria-label="Torna-Su"></div>
 </body>
+
 </html>
