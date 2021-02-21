@@ -162,11 +162,10 @@ main[role='main']{
    font-family:social;
    transform:translateY(-50%);
    cursor:pointer;
-   color: #f5f5f5e5;
+   color: #f5f5f5e5 !important;
    z-index:1000;
    display:none;
 }
-
 
 
 .slide-show-left-arrow{

@@ -138,12 +138,12 @@ function setMessageErrorField(field,message){
 
 function setStateErrorField(field,state){
    if(state === 'errore'){
-      field.removeAttribute('aria-invalid');
+      field.setAttribute('aria-invalid',true);
       field.classList.add('form-errore');
       field.classList.remove('form-valid');
    }
    else{
-      field.setAttribute('aria-invalid',true);
+      field.removeAttribute('aria-invalid');
       field.classList.remove('form-errore');
       field.classList.add('form-valid');
    }

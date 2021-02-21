@@ -1,3 +1,5 @@
+import './moduli.js';
+
 (()=>{
    //aggiungo un listener allo scroll per implementare position:sticky per l'elemento aside
    let asideOrdineBox = document.querySelector('#box-ordina');

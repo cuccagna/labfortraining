@@ -336,7 +336,7 @@ font: inherit;
 
 
  input.form-valid{
-    background-image: url('../../multimedia/icon/check-mark.png');
+    background-image: url('../../multimedia/icon/checkMark.png');
     background-repeat: no-repeat;
     background-position: right 0.5em center;
  }

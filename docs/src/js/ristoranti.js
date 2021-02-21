@@ -1,3 +1,5 @@
+import './moduli.js';
+
 (function(){
    let observer = new MutationObserver(gestoreMutazione);
    observer.observe(document.getElementById('ristoranti'),{childList:true});

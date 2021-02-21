@@ -33,8 +33,8 @@
                <nav id='menu-home'>
                   <a href='#' class='close-menu' aria-label='Clicca per chiudere il menu'></a>
                   <ul>
-                     <li><a href="../../index.html" tabindex="1" accesskey="1" title='Usa combinazione tasti tuo sistema + 1 per accesso diretto'>Home</a></li>
-                     <li><a href="#" tabindex="2" accesskey="2" title='Usa combinazione tasti tuo sistema + 2 per accesso diretto'>Accedi</a></li>
+                     <li><a href="../../index.html" target='_blank' tabindex="1" accesskey="1" title='Usa combinazione tasti tuo sistema + 1 per accesso diretto'>Home</a></li>
+                     <li><a href="#login-wrapper" tabindex="2" accesskey="2" title='Usa combinazione tasti tuo sistema + 2 per accesso diretto'>Accedi</a></li>
                      <li><a href="#" tabindex="3" accesskey="3" title='Usa combinazione tasti tuo sistema + 3 per accesso diretto'>Ristoranti</a></li>
                      <li>
                         <ul>
@@ -83,7 +83,99 @@
       <div>
    </footer>
 
+   <div id='login-wrapper' class="form-outer-wrapper">
+      <div class="form-inner-wrapper">
+         <p class='home-back'>
+            <a href='ristoranti.html#main-header'>   
+               <img alt='Torna alla home' title='Torna alla home' src='../../multimedia/icon/home32.png'>
+            </a>
+         </p>
+         <h3>Login</h3>
+         <form id="login-form" name="login-form" action="" method="post">
    
+         <div class="fieldset-wrapper">
+   
+            <fieldset>
+               <legend>Credenziali d'accesso</legend>
+   
+               <p class="field field-text">
+                  <label for="login-email">Email</label>
+                  <input title="Inserisci l'email con cui ti sei registrato" autocomplete='off' name="login-email" aria-describedby="login-email-errore" id="login-email" type="text" />
+                  <span id="login-email-errore" class="form-error"></span>
+               </p>
+
+               <p class="field field-text">
+                  <label for="login-password">Password</label>
+                  <input title='Inserisci la password con cui ti sei registrato' aria-describedby="login-password-errore" name="login-password" id="login-password" type="password" />
+                  <span id="login-password-errore" class="form-error"></span>
+               </p>
+
+               <p class="field-submit">
+                  <button class="submit" name="submit-login" type="submit">Accedi</button>
+               </p>
+
+               <div class='register-container'>
+               <p class="field field-check">
+                  <label for="remember"><input name="remember" type="checkbox" value="yes" />Ricorda password</label>
+               </p>
+
+               <p class='field'>
+                  <a id='registrati' title='registrati' href="ristoranti.html#register-wrapper">Registrati</a>
+               </p>
+            </div>
+            </fieldset>
+         </div>
+         </form>
+   </div>
+  </div>
+
+  <div id='register-wrapper' class="form-outer-wrapper">
+   <div class="form-inner-wrapper">
+      <p class='home-back'>
+         <a href='../../index.html#main-header'>   
+            <img alt='Torna alla home' title='Torna alla home' src='../../multimedia/icon/home32.png'>
+         </a>
+      </p>
+      <h3>Registrati</h3>
+      <form id="register-form" name='register-form' action="" method="post">
+
+      <div class="fieldset-wrapper">
+
+         <fieldset>
+            <legend>Credenziali d'accesso</legend>
+
+            <p class="field field-text">
+               <label for="login-email">Email</label>
+               <input title="Inserisci un'email valida" autocomplete='off' aria-describedby="register-email-errore" name="register-email" id="register-email" type="text" />
+               <span id="register-email-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-text">
+               <label for="register-password">Password</label>
+               <input title='Scegli una password' aria-describedby="register-password-errore register-password-help" name="register-password" id="register-password" type="password" />
+               <span id="register-password-help" role="tooltip" class="form-help">La password deve essere lunga almeno 8 caratteri e contenere almeno un numero e una lettera maiuscola</span>
+               <span id="register-password-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-text">
+               <label for="register-password-again">Ripeti password</label>
+               <input title='Reimmetti la password' name="register-password-again"  aria-describedby="register-password-again-errore" id="register-password-again" type="password" />
+               <span id="register-password-again-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-check"> 
+               <label for="termini-condizioni">Termini e condizioni</label>
+               <input name='termini-condizioni' id="termini-condizioni" type="checkbox" value="accepted" /><span>Certifico di avere letto ed accetto <a href='index.html' target='_blank'>Termini d&apos;uso</a> e <a href='index.html' target='_blank'>l&apos;informativa sulla privacy</a></span>
+            </p>
+
+         <p class="field-submit">
+            <button class="submit" name="submit-register" id='submit-register' type="submit">Registrati</button>
+         </p>
+         </fieldset>
+      </div>
+      </form>
+</div>
+</div>
 
    <script type="text/javascript" id='wfscript'>
       /*Sintassi per usare font che sono sul mio server. no su google o altrove*/
@@ -104,6 +196,6 @@
     })();
    </script>
 
-<script src='../js/ristoranti.js'></script>
+<script src='../js/ristoranti.js' type='module'></script>
 </body>
 </html>
