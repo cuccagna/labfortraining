@@ -71,7 +71,7 @@ import './moduli.js';
       const priceNode = el.querySelector("div[class='menu-categoria-item-price']");
       const prezzo = convertFromEuroToFloat(priceNode);
       let totaleOrdineNode = document.querySelector('.box-ordina-totale span:last-of-type');
-      totaleOrdine = convertFromEuroToFloat(totaleOrdineNode);
+      let totaleOrdine = convertFromEuroToFloat(totaleOrdineNode);
       totaleOrdine = checkFirstOrder(totaleOrdine); //se è il primo articolo aggiungi anche il costo di consegna al totale
       
       totaleOrdine += prezzo;
