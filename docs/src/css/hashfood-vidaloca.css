@@ -1,0 +1,23 @@
+/* vidaloka-regular - latin */
+@font-face {
+   font-family: Vidaloca;
+   src: url('../../multimedia/font/vidaloka.eot'); /* IE9 Compat Modes */
+   src: local(''),
+        url('../../multimedia/font/vidaloka.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../multimedia/font/vidaloka.woff2') , /* Super Modern Browsers */
+        url('../../multimedia/font/vidaloka.woff') , /* Modern Browsers */
+        url('../../multimedia/font/vidaloka.ttf') , /* Safari, Android, iOS */
+        url('../../multimedia/font/vidaloka.svg#Vidaloka') ; /* Legacy iOS */
+ }
+
+ /* Hashfood-regular - latin */
+@font-face {
+   font-family: Hashfood;
+   src: url('../../multimedia/font/hashfood.eot'); /* IE9 Compat Modes */
+   src: local(''),
+        url('../../multimedia/font/hashfood?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../../multimedia/font/hashfood.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../../multimedia/font/hashfood.woff') format('woff'), /* Modern Browsers */
+        url('../../multimedia/font/hashfood.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../../multimedia/font/hashfood.svg#Hashfood') format('svg'); /* Legacy iOS */
+ }

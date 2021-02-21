@@ -1,142 +1,273 @@
-<!doctype html>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="it">
 <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Hash food. Servizio di consegna cibo a domicilio.">
+   <meta name="keywords" content="Hash Food, #Food , food delivery , cibo a domicilio"> 
+   <meta name="author" content="Nicola Ciaco">
 
-  <title>Responsive Layout</title>
-  
-  <link rel="stylesheet" href="barraDiMenuElastica_Snippet.css" />
- 
-  <!-- <link rel="stylesheet" href="print.css" media="print" /> -->
-    
-  <meta name="viewport" content="width=device-width">
+   <link rel="apple-touch-icon" sizes="180x180" href="multimedia/icon/apple-touch-icon.png">
+   <link rel="icon" type="image/x-icon" href="multimedia/icon/favicon.ico" />
+   <link rel="icon" type="image/png" sizes="32x32" href="multimedia/icon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="multimedia/icon/favicon-16x16.png">
+   <link rel="manifest" href="multimedia/icon/site.webmanifest">
+   <title>Hash Food</title>
 
-  <!-- <script type="text/javascript">
-    var caricaFoto = function() {
-    document.querySelector("#hero").innerHTML="<img src='big.jpg'>";
-    //alert('CIAO')
-    };
-    
-    var caricaFoto2 = function() {
-    document.querySelector("#hero").innerHTML="<img src='small.jpg'>";
-    };
-    
-    var caricaFotoTablet = function() {
-    document.querySelector("#hero").innerHTML="<img src='medium.jpg'>";
-    };
-    </script> -->
+   <link href="src/css/main.css" rel="stylesheet">
+   <link href="src/css/home.css" rel="stylesheet">
 
-    <script src="snippet.js"></script>
-
+   
 </head>
 
 <body>
+   <div class='copertina'>
+      <p class='copertina-contain typewriter'>
+         HashFood il food delivery preferito dagli italiani
+      <p> 
+   </div>
 
-  <div id="header">
-    <div class="inner">
-	
-      <h2>Header <a href="#">Indietro</a></h2>
+   <header id='main-header'>
+      <div class='content-header-footer'>
+         <div class="content-wrapper" id="header-template">
+            <div id="logo-home-header">
+               <img src="multimedia/img/logo.png" alt='Vespa Logo del sito' title='Logo del sito'/>
+            </div>
 
-    </div>
-  </div>
+            <h1 id='main-header'>HASHFOOD</h1>
+            <div>
+               <a href='#menu-home' class='hamburger-icon' aria-label='Clicca per aprire il menu'></a>
+               <nav id='menu-home'>
+                  <a href='#' class='close-menu' aria-label='Clicca per chiudere il menu'></a>
+                  <ul>
+                     <li><a href="index.html" tabindex="1" accesskey="1" title='Usa combinazione tasti tuo sistema + 1 per accesso diretto'>Home</a></li>
+                     <li><a href="#login-wrapper" tabindex="2" accesskey="2" title='Usa combinazione tasti tuo sistema + 2 per accesso diretto'>Accedi</a></li>
+                     <li><a href="#" tabindex="3" accesskey="3" title='Usa combinazione tasti tuo sistema + 3 per accesso diretto'>Ristoranti</a></li>
+                     <li>
+                        <ul>
+                           <li><a href='#' tabindex="4" accesskey="4" title='Vai alla nostra pagina facebook. Usa combinazione tasti tuo sistema + 4 per accesso diretto'class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="5" accesskey="5" title='Vai alla nostra pagina twitter. Usa combinazione tasti tuo sistema + 5 per accesso diretto' class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="6" accesskey="6" title='Vai alla nostra pagina instagram. Usa combinazione tasti tuo sistema + 6 per accesso diretto' class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="7" accesskey="7" title='Vai alla nostra pagina youtube. Usa combinazione tasti tuo sistema + 7 per accesso diretto' class='cerchio-social'></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
 
-  <div id="hero" class="pageBody">
-  </div>
-
-  <nav class="pageBody clearfix">
-
-    <input type="checkbox" id="hamburger-element">
-       <label for="hamburger-element"></label>
-     <ul>
-      <!-- <li><a href="#">Menu</a></li> -->
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Corsi</a></li>
-      <li><a href="#">Open Day</a></li>
-      <li><a href="#">Contatti</a></li>
-     </ul>
-  </nav>
-
-  
-
-  <div class="pageBody">
- 
-    <div id="nav">
-    	<ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Friends</a></li>
-    	</ul>
-    </div>
-
-    
-
-    <div id="content">			
-      <div class="inner">
-			
-        <h1>Responsive Layout</h1>
-          
-        <img src="tim-cup.png">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          
-        <img src="roma.jpg" >
-
-        <p>Curabitur et leo dui, eu semper tellus. Vivamus aliquam, mi ultrices fringilla varius, augue nisl tincidunt elit, eu tincidunt ante metus ac mauris. Praesent congue blandit nunc, eu facilisis ligula faucibus sit amet. Proin eget turpis nulla. Phasellus mattis nisi a ante aliquet posuere. Vestibulum tortor quam, luctus imperdiet venenatis nec, molestie eu massa. Vivamus nec ipsum viverra augue aliquet bibendum. Morbi ac felis purus, sed vehicula mauris. Integer tempor mollis libero id hendrerit. Fusce sit amet urna quis justo varius pulvinar dapibus sed metus.</p>
-
-        <p>Ut vel mauris eu velit fringilla lobortis. Phasellus accumsan sem in nisl luctus gravida. Vestibulum vitae scelerisque eros. Nullam id leo erat, et congue elit. Nunc volutpat justo tempor magna pretium adipiscing. Vivamus eget massa odio. Suspendisse potenti. Aliquam erat volutpat. Proin faucibus leo vel sem lobortis sed hendrerit diam suscipit. Maecenas dignissim, neque sit amet tristique pulvinar, ipsum orci porttitor odio, ac auctor nunc mauris ac nisi. Sed vitae dui et urna mollis elementum et id purus. Suspendisse bibendum quam id lacus condimentum ut pharetra orci mollis. Curabitur et consequat nisi. Suspendisse dictum luctus neque, id tincidunt justo rutrum non. Aenean fringilla quam ac magna ornare vehicula.</p>
-
+         </div>
       </div>
-    </div>
 
-    <div id="sidebar">
-    	<div class="inner">
-			
-        <h2>Sidebar</h2>
-        <p>Duis aute irure dolor in reprehenderit in voluptate 
-        velit esse cillum dolore eu fugiat nulla pariatur. 
-        Morbi ac felis purus, sed vehicula mauris.</p>
+   </header>
 
-        <h2>Contact Us</h2>
-        <p>Morbi ac felis purus, sed vehicula mauris.</p>
+   <main role='main'>
+      <section id='presentation-hashfood'>
+           
+         <header>
+            <div class='slide-show'>
+               <h2 class="presentation-hashfood-title">
+                  <!-- Questo codice svg serve per ottenere il typographic lock-up, una tecnica che permette al contenuto di entrare perfettamente nel suo box -->
+                  <svg viewBox="0 0 345 60" role="presentation">
+                     <text id="presentation-hashfood-title-textcontent">
+                     <!-- Put both tspan elements on same line, to prevent bug in WebKit. -->
+                     <tspan class="hashfood-span-1" x="3" dy="0.8em">#FOOD IL N°1 IN ITALIA</tspan> <tspan class="hashfood-span-2" x="3" dy="0.9em">NEL FOOD DELIVERY</tspan>
+                     </text>
+                  </svg>
+                  
+               </h2>
 
-      	</div>
-    </div>
+               
+               <picture id='picture-carousel'>
+                  <source media="(min-width:50em)" srcset="multimedia/img/carousel1_big.jpg"> <!-- immagine da 1200px -->
+                  <source media="(min-width:37.5em)" srcset="multimedia/img/carousel1_large.jpg"> <!-- immagine da 800px -->
+                  <source media="(min-width:25em)" srcset="multimedia/img/carousel1_medium.jpg"> <!-- immagine da 600px -->
+                  <source  srcset="multimedia/img/carousel1_small.jpg"> <!-- immagine da 400px -->
+                  <img src='multimedia/img/carousel1_large.jpg' title='Hashfood n° 1 in Italia' alt='Immagine Hashfood n° 1 in Italia'> <!-- immagine da 800px come fallback -->
+               </picture>
 
-  </div>
 
-  <div id="footer">
-    <div class="inner">
-      <h3>Footer</h3>
-    </div>
-  </div>
+               <a href='#' class='slide-show-left-arrow' aria-label='Freccia per scorrere le immagini indietro'></a>
+               <a href='#' class='slide-show-right-arrow' aria-label='Freccia per scorrere le immagini avanti'></a>
+            </div>
+         </header> 
 
-<!-- Carica la foto grande se la finestra è larga più di 768px -->
-<!-- <script type="text/javascript">
+      </section>
 
-  cambia();
-  
-  function cambia()
-  {
-  //alert(window.orientation);
+      <section  id='box-search'>
+
+         <h3 id='box-search-header'>Inserisci l'indirizzo di consegna e trova i ristoranti più vicini a te</h3>
+         <form name='box-search-form'>
+            
+            
+         
+            <input type="text" title='Inserisci indirizzo, città' aria-describedby='box-search-errore' id="ricerca-indirizzo" autocomplete="off" placeholder="Inserisci indirizzo, città">
+
+            <input type="text" title='Inserisci numero civico' ='box-search-errore' placeholder='N°' id="num-civico" autocomplete="off" maxlength="5">
+
+             <span id="box-search-errore">
+               
+            </span> 
+          
+            <button type='submit' id="cerca" aria-label='Premi per cercare i ristoranti'></button>
+         </form>
+      </section>
+
+      <section  id='box-search'>
+         <h3 id='box-search-header'>Scarica l'app di Hash Food ed ordina dove vuoi, qualunque cosa desideri</h3>
+         <div class='icon-app-container'>
+            <a href="https://app.adjust.com/6zamp7?utm_medium=internal&amp;campaign=homepage" class="icon-app"><img title='Scarica su App Store' alt="Scarica su App Store" src="multimedia/icon/iosv2it.svg"></a>
+            <a href="https://app.adjust.com/6zamp7?utm_medium=internal&amp;campaign=homepage" class="icon-app"><img title='Scarica su Android Store' alt="Scarica su Android Store" src="multimedia/icon/androidv2it.svg"></a>
+         </div>
+      </section>
       
-  var dim=document.documentElement.clientWidth
-  
-  if ((dim<= 480)&&(window.orientation!=undefined)) {
-    caricaFoto2();
-    }
-    else if((dim > 480)&&(dim<= 768)&&(window.orientation!=undefined)){
-    caricaFotoTablet();
-    }
-    else{
-    caricaFoto();
-    }
-  }
-  
-  </script> -->
+      <div class='tornaSu-wrapper'>
+         <a class='tornaSu cerchio-social' aria-label='Bottone Torna Su' href='index.html#main-header'></a>
+      </div>
+   </main>
+
+   <footer class='content-header-footer'>
+      <div class=' content-wrapper table-template'>
+         <div class='table-riga'>
+         <span class='table-cella table-cella-intestazione'><h3>Seguici</h3></span>  
+         <span class='table-cella table-cella-intestazione'><h3>Metodi di pagamento</h3></span> 
+         </div> 
+         <div class='table-riga'>
+         <span class='table-cella'>
+            <a href='#' class='cerchio-social'>b</a>
+            <a href='#' class='cerchio-social'>c</a>
+            <a href='#' class='cerchio-social'>d</a>
+            <a href='#' class='cerchio-social'>a</a>
+         </span>
+         <span class='table-cella'>
+            <img src="multimedia/icon/mastercard.svg" title='Mastercard' alt='Mastercard'>
+            <img src="multimedia/icon/paypal.svg" title='Paypal' alt='Paypal'>
+            <img src="multimedia/icon/visa.svg" title='Visa' alt='Visa'>
+         </span>
+      </div>
+      <div>
+   </footer>
+
+   <div id='login-wrapper' class="form-outer-wrapper">
+      <div class="form-inner-wrapper">
+         <p class='home-back'>
+            <a href='index.html#main-header'>   
+               <img alt='Torna alla home' title='Torna alla home' src='multimedia/icon/home32.png'>
+            </a>
+         </p>
+         <h3>Login</h3>
+         <form id="login-form" name="login-form" action="" method="post">
+   
+         <div class="fieldset-wrapper">
+   
+            <fieldset>
+               <legend>Credenziali d'accesso</legend>
+   
+               <p class="field field-text">
+                  <label for="login-email">Email</label>
+                  <input title="Inserisci l'email con cui ti sei registrato" name="login-email" aria-describedby="login-email-errore" id="login-email" type="text" />
+                  <span id="login-email-errore" class="form-error"></span>
+               </p>
+
+               <p class="field field-text">
+                  <label for="login-password">Password</label>
+                  <input title='Inserisci la password con cui ti sei registrato' aria-describedby="login-password-errore" name="login-password" id="login-password" type="password" />
+                  <span id="login-password-errore" class="form-error"></span>
+               </p>
+
+               <p class="field-submit">
+                  <button class="submit" name="submit-login" type="submit">Accedi</button>
+               </p>
+
+               <div class='register-container'>
+               <p class="field field-check">
+                  <label for="remember"><input name="remember" type="checkbox" value="yes" />Ricorda password</label>
+               </p>
+
+               <p class='field'>
+                  <a id='registrati' title='registrati' href="index.html#register-wrapper">Registrati</a>
+               </p>
+            </div>
+            </fieldset>
+         </div>
+         </form>
+   </div>
+  </div>
+
+  <div id='register-wrapper' class="form-outer-wrapper">
+   <div class="form-inner-wrapper">
+      <p class='home-back'>
+         <a href='index.html#main-header'>   
+            <img alt='Torna alla home' title='Torna alla home' src='multimedia/icon/home32.png'>
+         </a>
+      </p>
+      <h3>Registrati</h3>
+      <form id="register-form" name='register-form' action="" method="post">
+
+      <div class="fieldset-wrapper">
+
+         <fieldset>
+            <legend>Credenziali d'accesso</legend>
+
+            <p class="field field-text">
+               <label for="login-email">Email</label>
+               <input title="Inserisci un'email valida" aria-describedby="register-email-errore" name="register-email" id="register-email" type="text" />
+               <span id="register-email-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-text">
+               <label for="register-password">Password</label>
+               <input title='Scegli una password' aria-describedby="register-password-errore register-password-help" name="register-password" id="register-password" type="password" />
+               <span id="register-password-help" role="tooltip" class="form-help">La password deve essere lunga almeno 8 caratteri e contenere almeno un numero e una lettera maiuscola</span>
+               <span id="register-password-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-text">
+               <label for="register-password-again">Ripeti password</label>
+               <input title='Reimmetti la password' name="register-password-again"  aria-describedby="register-password-again-errore" id="register-password-again" type="password" />
+               <span id="register-password-again-errore" class="form-error"></span>
+            </p>
+
+            <p class="field field-check"> 
+               <label for="termini-condizioni">Termini e condizioni</label>
+               <input name='termini-condizioni' id="termini-condizioni" type="checkbox" value="accepted" /><span>Certifico di avere letto ed accetto <a href='index.html' target='_blank'>Termini d&apos;uso</a> e <a href='index.html' target='_blank'>l&apos;informativa sulla privacy</a></span>
+            </p>
+
+         <p class="field-submit">
+            <button class="submit" name="submit-register" id='submit-register' type="submit">Registrati</button>
+         </p>
+         </fieldset>
+      </div>
+      </form>
+</div>
+</div>
+
+   <!-- RENDERE QUESTO SCRIPT UN MODULO, AUTOMATICAMENTE LO FA DIVENTARE DEFERRED. QUESTO INCIDE LEGGERMENTE
+   SULLE PRESTAZIONI CAUSANDO UN RITARDO DI 40-50 MS RISPETTO A LASCIARLO COME UNO SCRIPT NORMALE -->
+   <script src="src/js/home.js" type='module'></script>
+    <!-- Script che usa WebFontLoader per caricare i font. Se nel frattempo la pagina è già stata
+   visualizzata si usano altri font normali come fallback. Quando i font personalizzati sono 
+   caricati con la libreria webfontloader lo rilevo e li aggiungo dinamicamente (la libreria
+   aggiunge delle classi e posso sfruttarlo nel css). Inoltre essendo tutto messo prima del body
+   ho già parsato il DOM e quindi i tempi per scaricare libreria e i fonts diventano secondari.-->
+   <script type="text/javascript" id='wfscript'>
+      /*Sintassi per usare font che sono sul mio server. no su google o altrove*/
+      WebFontConfig = {
+         custom: {
+         families: ['Vidaloca:n4', 'Hashfood:n4'],
+         urls: ['./src/css/hashfood-vidaloca.css']
+         }
+      };
+   
+      //creazione dinamica di uno script
+      (function() {
+      let s=document.getElementById('wfscript');
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.type = 'text/javascript';
+      s.parentNode.insertBefore(wf, s);
+    })();
+   </script>
 
 </body>
-
 </html>

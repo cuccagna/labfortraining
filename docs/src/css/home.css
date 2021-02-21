@@ -1,0 +1,464 @@
+@charset "utf-8";
+
+/*#region WEB-ICON-FONT */
+@font-face {
+   font-family: 'social';
+   src: url('../../multimedia/icon/web-font-icon/social.eot?');
+   src: url('../../multimedia/icon/web-font-icon/social.eot?#iefix') format('embedded-opentype'),
+         url('../../multimedia/icon/web-font-icon/social.woff2') format('woff2'),
+         url('../../multimedia/icon/web-font-icon/social.woff') format('woff'),
+         url('../../multimedia/icon/web-font-icon/social.ttf') format('truetype'),
+         url('../../multimedia/icon/web-font-icon/social.svg#social') format('svg');
+}
+/*#endregion WEB-ICON-FONT */
+
+
+/*#region HEADER */
+
+#logo-home-header img{
+   transform:translateX(-50%);
+   animation:muoviMoto 2s 4.2s forwards;
+}
+
+header h1#main-header{
+   margin-right:auto; /* Togliendo questa proprietà gli elementi saranno equispaziati */
+   /* font-style: italic; */
+}
+
+
+/* Serve quando clicco sulla copertina iniziale
+per fare partire subito l animazione delle moto */
+#logo-home-header img.logo-home-header-delay{
+   animation:muoviMoto 2s 1.2s forwards;
+}
+
+@keyframes muoviMoto{
+   
+   5%{
+      transform:translateX(-55%);
+   }
+   10%{
+      transform:translateX(-50%);
+   }
+   80%{
+      transform:translateX(-30%);
+   }
+   88%{
+      transform:translateX(5%);
+
+   }
+   96%,to{
+      transform:translateX(0);
+
+   }
+   
+}
+
+/* .scale-up{
+   font-size:3.5em;
+} */
+/*#endregion HEADER */
+
+
+
+/*#region COPERTINA */
+
+
+.copertina{
+   position:fixed;
+   width:100%;
+   height:100%;
+   display:flex;
+   background-color: var(--colore-primo);
+   animation: uscitaAlto 1.5s 2.7s both , uscitaBasso 0s 4.2s; /* La seconda animazione serve per cancellare del tutto l elemento */
+   z-index:10;/* Necessario altrimenti la moto diventa visibile */
+}
+
+
+.erase-copertina{
+   animation: uscitaAlto 1.5s 1s both , uscitaBasso 0s 2.5s; /* La seconda animazione serve per cancellare del tutto l elemento */
+}
+
+.copertina-contain{
+   margin:auto; /*Regola per centrare un item flex */
+   color: var(--colore-secondo);
+   text-align:center;
+   font-family: monospace;
+}
+/*#endregion COPERTINA */
+
+
+/*#region PRESENTATION HASHFOOD (AND CAROUSEL)*/
+main[role='main']{
+   position:relative; /*Queste due regole necessarie per impedire che il menu quando si apre stia sotto il contenuto del main*/
+   z-index:1; 
+}
+
+
+#presentation-hashfood img{
+   width:100%;
+}
+
+
+.slide-show{
+   position:relative;
+}
+
+.presentation-hashfood-title{
+   position:absolute;
+   display:block;
+   left:25%;
+   right:25%;
+   top:24%;
+   width: 50%;
+   font-size:2em;
+}
+
+.presentation-hashfood-title svg {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background-color: var(--colore-secondo);
+   border-radius:2px;
+ }
+
+ .presentation-hashfood-title text{
+    fill: var(--colore-quarto);
+ }
+
+ /* .hashfood-span-1 {
+ } */
+ .hashfood-span-2 {
+   font-size: 35.6px;
+ }
+
+@supports (mix-blend-mode: screen){
+   .presentation-hashfood-title{
+      mix-blend-mode: screen;
+   }
+
+   /* text tag svg che imposto a nero per sovrascrivere la fallback */
+   .presentation-hashfood-title text{
+      fill: #000; 
+   }
+}
+
+
+
+.slide-show-left-arrow,.slide-show-right-arrow{
+   position:absolute;
+   border:.5px solid whitesmoke;
+   font-size:1.6em;
+   font-weight:bold;
+   text-align:center;
+   text-shadow: 1px 1px 5px;
+   box-shadow: 1px 1px 5px;;
+   width:2em;
+   line-height:2em;
+   top:50%;
+   display:block;
+   font-family:social;
+   transform:translateY(-50%);
+   cursor:pointer;
+   color: #f5f5f5e5;
+   z-index:1000;
+   display:none;
+}
+
+
+
+.slide-show-left-arrow{
+   left:2%;
+}
+
+.slide-show-right-arrow{
+   right:2%;
+}
+
+.slide-show-left-arrow::before{
+   content:'g';
+}
+
+.slide-show-right-arrow::before{
+   content:'h';
+}
+/*#endregion PRESENTATION HASHFOOD (AND CAROUSEL)*/
+
+/*#region BOX DI RICERCA*/
+section#box-search{
+   min-height: 220px;
+   background-image: linear-gradient(#fc9,#963 140%);
+   position:relative;
+   margin-top:-3px; /* Serve per eliminare uno spazio bianco causato dal tag picture della sezione sopra. Con margin-top negativo sposto la sezione corrente leggermente sopra per correggere il problema */
+}
+
+
+#box-search-header{
+   text-align:center;
+   color: var(--colore-primo);
+   padding-top:20px;
+}
+
+form[name='box-search-form']{
+   margin:0 auto;
+   position:absolute;
+   left:50%;
+   top:50%;
+   transform:translate(-50%,-50%);
+   width:95%;
+   max-width:40em;
+   height:50px;
+   background-color:white;
+   border-radius:3px;
+}
+
+form span#box-search-errore{
+   position:absolute;
+   top:50px;
+   border-top:1px solid #d50c2b;
+   visibility:hidden;
+   color:#d50c2b;
+   font-size:0.9em;
+   padding-top:8px;
+   transition: .3s;
+}
+
+form span#box-search-errore.active-error{
+   width:84%;
+   visibility:visible;
+}
+
+
+form span#box-search-errore.active-error.first-error-message:before{
+   content:'Indirizzo inesistente';
+}
+
+form span#box-search-errore.active-error.second-error-message:before{
+   content:'Indirizzo mancante';
+}
+
+
+
+form span#box-search-errore.active-error-civico{
+   text-align:right;
+}
+
+form span#box-search-errore.active-error-civico::after{
+   content:'Inserire il numero civico';
+   font:inherit;   
+}
+
+form span#box-search-errore.active-error-civico2::after{
+   content:'Civico non corretto';
+   font:inherit;   
+}
+
+form input#ricerca-indirizzo{
+   display:block;
+   position:absolute;
+   width:60%;
+   border:none;
+   top:5px;
+   bottom:5px;
+   left:1%;
+   font-size:1.3em;
+   outline:none;
+   color:var(--colore-terzo);
+   font-size:0.8em;
+   line-height:40px;
+
+}
+
+/* form input#ricerca-indirizzo:focus{
+} */
+
+form input#num-civico{
+   position:absolute;
+   right:18%;
+   background-color: #fff;
+   top:6px;
+   bottom:6px;
+   width:0;
+   visibility:hidden;
+   border-radius:2px;
+   border:2px solid var(--colore-primo);
+   box-sizing:content-box;
+   border-radius:5px;
+   color:var(--colore-terzo);
+   text-align:center;
+   
+}
+
+form input#num-civico.inserisci-civico{
+   width:10%;
+   visibility:visible;
+}
+
+form input#num-civico:focus{
+   border-style:solid;
+   outline:none;
+}
+
+form[name='box-search-form'] button#cerca{
+   position:absolute;
+   width: 15%;
+   right: 1%;
+   top:5px;
+   bottom:5px;
+   text-align:center;
+   padding:0;
+   margin:0;
+   background-color:var(--colore-primo);
+   background-image: linear-gradient(to bottom, var(--colore-primo), rgba(233, 94, 2, 0.952));
+   font-family:Vidaloca;
+}
+
+form[name='box-search-form'] button#cerca:before{
+   font-size:smaller;
+   content:'\69';
+   font-family:social;
+}
+/*#endregion BOX DI RICERCA*/
+
+/*#region BOX APP*/
+.icon-app-container{
+   text-align:center;
+   padding-top:60px;
+}
+
+.icon-app img{
+   width:35%;
+}
+/*#endregion BOX APP*/
+
+
+
+ /*#region MEDIA QUERY */
+
+@media only screen and (min-width:26em){
+      /*Nel mobile e schermi più piccoli non uso l effetto typewriter*/
+      .typewriter{
+         overflow: hidden; /* Assicura contenuto non visualizzato finchè non finisce animazione */
+         white-space: nowrap; /* Keeps the content on a single line */
+         animation:entrataLaterale 2.5s;
+         letter-spacing: .05em;
+         word-spacing: -.4ch;
+         width:0; /* Per renderlo invisibile inizialmente. Ma solo a partire da 26em in poi perchè negli schermi più piccoli visualizzo direttamente l elemento */
+      }
+
+      /*BOX DI RICERCA*/
+      #box-search-header{
+         font-size:1.3em;
+      }
+
+      form input#num-civico{
+         width:40px;
+      }
+
+      form[name='box-search-form'] button#cerca:before{
+         font-size:1.3em;
+         font-weight:500;
+         content:'Cerca';
+         font-family:inherit;
+      }
+
+      
+      form input#ricerca-indirizzo{
+         font-size:1.3em;
+      }
+
+      /*Box SEARCH*/
+      form span#box-search-errore{
+         font-size:1.1em;
+         text-indent:25px;
+         background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMi4wMDEgNTEyLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8Zz4KCQk8cGF0aCBkPSJNNTAzLjgzOSwzOTUuMzc5bC0xOTUuNy0zMzguOTYyQzI5Ny4yNTcsMzcuNTY5LDI3Ny43NjYsMjYuMzE1LDI1NiwyNi4zMTVjLTIxLjc2NSwwLTQxLjI1NywxMS4yNTQtNTIuMTM5LDMwLjEwMiAgICBMOC4xNjIsMzk1LjM3OGMtMTAuODgzLDE4Ljg1LTEwLjg4Myw0MS4zNTYsMCw2MC4yMDVjMTAuODgzLDE4Ljg0OSwzMC4zNzMsMzAuMTAyLDUyLjEzOSwzMC4xMDJoMzkxLjM5OCAgICBjMjEuNzY1LDAsNDEuMjU2LTExLjI1NCw1Mi4xNC0zMC4xMDFDNTE0LjcyMiw0MzYuNzM0LDUxNC43MjIsNDE0LjIyOCw1MDMuODM5LDM5NS4zNzl6IE00NzcuODYxLDQ0MC41ODYgICAgYy01LjQ2MSw5LjQ1OC0xNS4yNDEsMTUuMTA0LTI2LjE2MiwxNS4xMDRINjAuMzAxYy0xMC45MjIsMC0yMC43MDItNS42NDYtMjYuMTYyLTE1LjEwNGMtNS40Ni05LjQ1OC01LjQ2LTIwLjc1LDAtMzAuMjA4ICAgIEwyMjkuODQsNzEuNDE2YzUuNDYtOS40NTgsMTUuMjQtMTUuMTA0LDI2LjE2MS0xNS4xMDRjMTAuOTIsMCwyMC43MDEsNS42NDYsMjYuMTYxLDE1LjEwNGwxOTUuNywzMzguOTYyICAgIEM0ODMuMzIxLDQxOS44MzYsNDgzLjMyMSw0MzEuMTI4LDQ3Ny44NjEsNDQwLjU4NnoiIGZpbGw9IiNkNTBjMmIiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHJlY3QgeD0iMjQxLjAwMSIgeT0iMTc2LjAxIiB3aWR0aD0iMjkuOTk2IiBoZWlnaHQ9IjE0OS45ODIiIGZpbGw9IiNkNTBjMmIiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcmVjdD4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGc+CgkJPHBhdGggZD0iTTI1NiwzNTUuOTljLTExLjAyNywwLTE5Ljk5OCw4Ljk3MS0xOS45OTgsMTkuOTk4czguOTcxLDE5Ljk5OCwxOS45OTgsMTkuOTk4YzExLjAyNiwwLDE5Ljk5OC04Ljk3MSwxOS45OTgtMTkuOTk4ICAgIFMyNjcuMDI3LDM1NS45OSwyNTYsMzU1Ljk5eiIgZmlsbD0iI2Q1MGMyYiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJPC9nPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=) 1px 6px/16px 16px no-repeat;
+      }
+
+      form span#box-search-errore.active-error-civico{
+         background-position: center right 1px; 
+      }
+
+      form span#box-search-errore.active-error-civico::after{
+         padding-right:21px;
+      }
+
+      .icon-app img{
+         width:135px;
+      }
+}
+ 
+@media only screen and (min-width:32em){
+   
+   .copertina-contain{font-size:1.2em;}
+
+   /*Box SEARCH*/
+   form span#box-search-errore{
+      font-size:1.3em;
+   }
+
+}
+
+/* [1]
+Se aumenti questo font-size l'animazione va fuori dalla window. Ma se aumenti il font-size 
+nel body funziona tutto perchè anche la media query scala 
+(dato che l'em nella media query è relativo al font-size nel body o nello user-agent) */
+ @media only screen and (min-width:48em){
+      /*REGOLE COPERTINA*/
+      .copertina-contain{
+         font-size:1.6em; /*[1]*/
+      }
+
+      /* Animazione effetto scrittura ottenendo con il bordo destro che fa da cursore e 
+      dimensione che passa da 0 a 37em */
+      .typewriter {
+      color: #fff;
+      border-right: .15em solid #630; /* Il cursore è il bordo */
+      letter-spacing: .12em; 
+      word-spacing: normal;
+      animation: 
+      typing 2.5s 0.2s steps(30, end),
+      blink-caret .5s step-end infinite;
+      } 
+
+/*       Togliendo l'animazione di scrittura causo l immediata visualizzazione
+      del testo
+ */      .endTypewriter{
+         animation: none ; 
+         width:auto; /*Se premo il mouse visualizzo di colpo l elemento*/ 
+      }
+
+      /* Effetto scrittura */
+      @keyframes typing {
+         from { width: 0 }
+         to { width: 37em } /* Dimensione adeguata per contenere il testo.  */
+      }
+      
+      /* L'effetto cursore */
+      @keyframes blink-caret {
+         from, to { border-color: transparent }
+         50% { border-color: #630}
+      }
+
+      /*REGOLE CAROUSEL*/
+      /*Costringe anche immagini più alte di 300px ad adattarsi alla dimensione massima*/
+      #presentation-hashfood img{
+         height:300px;
+         object-fit:cover;
+      }
+
+      .slide-show-left-arrow,.slide-show-right-arrow{
+         display:block;
+      }
+
+      /*REGOLE BOX DI RICERCA*/
+      section#box-search,footer.content-header-footer{
+         margin-top:30px;
+      }
+           
+ }
+
+
+ 
+

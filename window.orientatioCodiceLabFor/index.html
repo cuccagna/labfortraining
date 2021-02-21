@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <title>Responsive Layout</title>
+  
+  <link rel="stylesheet" href="barraDiMenuElastica_Snippet.css" />
+ 
+  <!-- <link rel="stylesheet" href="print.css" media="print" /> -->
+    
+  <meta name="viewport" content="width=device-width">
+
+  <!-- <script type="text/javascript">
+    var caricaFoto = function() {
+    document.querySelector("#hero").innerHTML="<img src='big.jpg'>";
+    //alert('CIAO')
+    };
+    
+    var caricaFoto2 = function() {
+    document.querySelector("#hero").innerHTML="<img src='small.jpg'>";
+    };
+    
+    var caricaFotoTablet = function() {
+    document.querySelector("#hero").innerHTML="<img src='medium.jpg'>";
+    };
+    </script> -->
+
+    <script src="snippet.js"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <div class="inner">
+	
+      <h2>Header <a href="#">Indietro</a></h2>
+
+    </div>
+  </div>
+
+  <div id="hero" class="pageBody">
+  </div>
+
+  <nav class="pageBody clearfix">
+
+    <input type="checkbox" id="hamburger-element">
+       <label for="hamburger-element"></label>
+     <ul>
+      <!-- <li><a href="#">Menu</a></li> -->
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Corsi</a></li>
+      <li><a href="#">Open Day</a></li>
+      <li><a href="#">Contatti</a></li>
+     </ul>
+  </nav>
+
+  
+
+  <div class="pageBody">
+ 
+    <div id="nav">
+    	<ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Friends</a></li>
+    	</ul>
+    </div>
+
+    
+
+    <div id="content">			
+      <div class="inner">
+			
+        <h1>Responsive Layout</h1>
+          
+        <img src="tim-cup.png">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          
+        <img src="roma.jpg" >
+
+        <p>Curabitur et leo dui, eu semper tellus. Vivamus aliquam, mi ultrices fringilla varius, augue nisl tincidunt elit, eu tincidunt ante metus ac mauris. Praesent congue blandit nunc, eu facilisis ligula faucibus sit amet. Proin eget turpis nulla. Phasellus mattis nisi a ante aliquet posuere. Vestibulum tortor quam, luctus imperdiet venenatis nec, molestie eu massa. Vivamus nec ipsum viverra augue aliquet bibendum. Morbi ac felis purus, sed vehicula mauris. Integer tempor mollis libero id hendrerit. Fusce sit amet urna quis justo varius pulvinar dapibus sed metus.</p>
+
+        <p>Ut vel mauris eu velit fringilla lobortis. Phasellus accumsan sem in nisl luctus gravida. Vestibulum vitae scelerisque eros. Nullam id leo erat, et congue elit. Nunc volutpat justo tempor magna pretium adipiscing. Vivamus eget massa odio. Suspendisse potenti. Aliquam erat volutpat. Proin faucibus leo vel sem lobortis sed hendrerit diam suscipit. Maecenas dignissim, neque sit amet tristique pulvinar, ipsum orci porttitor odio, ac auctor nunc mauris ac nisi. Sed vitae dui et urna mollis elementum et id purus. Suspendisse bibendum quam id lacus condimentum ut pharetra orci mollis. Curabitur et consequat nisi. Suspendisse dictum luctus neque, id tincidunt justo rutrum non. Aenean fringilla quam ac magna ornare vehicula.</p>
+
+      </div>
+    </div>
+
+    <div id="sidebar">
+    	<div class="inner">
+			
+        <h2>Sidebar</h2>
+        <p>Duis aute irure dolor in reprehenderit in voluptate 
+        velit esse cillum dolore eu fugiat nulla pariatur. 
+        Morbi ac felis purus, sed vehicula mauris.</p>
+
+        <h2>Contact Us</h2>
+        <p>Morbi ac felis purus, sed vehicula mauris.</p>
+
+      	</div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div class="inner">
+      <h3>Footer</h3>
+    </div>
+  </div>
+
+<!-- Carica la foto grande se la finestra è larga più di 768px -->
+<!-- <script type="text/javascript">
+
+  cambia();
+  
+  function cambia()
+  {
+  //alert(window.orientation);
+      
+  var dim=document.documentElement.clientWidth
+  
+  if ((dim<= 480)&&(window.orientation!=undefined)) {
+    caricaFoto2();
+    }
+    else if((dim > 480)&&(dim<= 768)&&(window.orientation!=undefined)){
+    caricaFotoTablet();
+    }
+    else{
+    caricaFoto();
+    }
+  }
+  
+  </script> -->
+
+</body>
+
+</html>

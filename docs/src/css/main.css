@@ -1,0 +1,812 @@
+@charset "utf-8";
+
+/*#region CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* body {
+	line-height: 1;
+} */
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*#endregion CSS RESET */
+
+/*#region  CORE */
+:root{
+      --colore-primo:#f60;
+      --colore-secondo:#fc9;
+      --colore-terzo:#630;
+      --colore-quarto:#f96;
+      --colore-quinto:#963;
+   }
+ 
+   
+      /*Aggiusto il font in modo da rendere meno marcate le differenze tra il font di fallback e
+     il font definitivo*/
+   body{
+      font-family:Garamond, 'Times New Roman', serif;
+      letter-spacing:0.1px;
+      font-weight:300;
+      line-height:1.1;
+      /*Pattern per lo sfondo di schermi grandi*/
+      /* background-color: var(--colore-secondo);
+      background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+      linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+      linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+      linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+      background-size: 13px, 29px, 37px, 53px; */
+      background-color: rgba(255, 204, 153, 0.288);
+   }
+
+   a {
+      text-decoration:none;
+   }
+
+   
+    /* body p{
+      font-size:1.15em; 
+   }
+
+   .wf-hashfood-n4-active body p{
+      font-size:1.25em; 
+   }  */
+
+   .wf-hashfood-n4-active body{
+      font-family:Hashfood,Garamond, 'Times New Roman', serif;
+       letter-spacing: normal;
+       font-weight:normal;
+       line-height:1; 
+       font-size-adjust:auto;
+   }
+
+   h1,h2,h3,h4,h5,h6{
+      font-family:Baskerville, 'Big Caslon', 'Palatino Linotype', Palatino, serif;
+      color:var(--colore-secondo);
+      text-align:center;
+   }
+
+   /*Imposta il font quando è disponibile. webfontloader aggiunge la classe all'elemento html*/
+   .wf-vidaloca-n4-active h1,h2,h3,h4,h5,h6{
+      font-family:Vidaloca,Baskerville, 'Big Caslon', 'Palatino Linotype', Palatino, serif;
+   }
+
+   .content-wrapper{
+      width:95%;
+      max-width: 80em; /* 1280 px */
+      margin:0 auto;
+   }
+
+   .cerchio-social{
+      border-radius:50%;
+      line-height:1.5em;
+      width:1.5em;
+   }
+   
+   spaziatura-box{
+      margin-top:30px;
+   }
+/*#endregion CORE*/
+
+/*#region MODULI*/
+input{
+font: inherit;
+}
+
+
+ input[type="checkbox"] {
+   margin-right: .25em;
+   margin-top:1.5em;
+   position:relative;
+   top:1.5px;
+ }
+
+ ::-webkit-input-placeholder {
+   font-style: italic;
+ }
+ :-ms-input-placeholder {
+   font-style: italic;
+ }
+ ::-moz-placeholder {
+   font-style: italic;
+ }
+
+ button {
+   box-sizing: border-box;
+   cursor: pointer;
+   border: 0;
+   padding: .5em 1em;
+   color: #fff;
+   border-radius: .25em;
+   font-size: 1em;
+   background-color: var(--colore-primo);
+   background-image: -webkit-linear-gradient(top, rgb(247, 140, 0), var(--colore-primo));
+   background-image: -moz-linear-gradient(top, rgb(247, 140, 0), var(--colore-primo));
+   background-image: -o-linear-gradient(top, rgb(247, 140, 0), var(--colore-primo));
+   background-image: linear-gradient(to bottom, rgb(247, 140, 0), var(--colore-primo));
+   box-shadow: 0 .25em 0 rgba(255, 204, 153), inset 0 1px 0 rgba(255, 204, 153, 0.4);
+/*    box-shadow: 0 .25em 0 rgba(23, 59, 109, 0.3), inset 0 1px 0 rgba(0, 0, 0, 0.3);
+ */   transition:all 150ms;
+ }
+ button:focus {
+   outline: 0;
+   background-color: rgb(247, 132, 0);
+   background-image: -webkit-linear-gradient(top, rgb(247, 132, 0), rgb(247, 91, 0));
+   background-image: -moz-linear-gradient(top, rgb(247, 132, 0), rgb(247, 91, 0));
+   background-image: -o-linear-gradient(top, rgb(247, 132, 0), rgb(247, 91, 0));
+   background-image: linear-gradient(to bottom, rgb(247, 132, 0), rgb(247, 91, 0));
+   box-shadow: 0 .25em 0 rgba(255, 204, 153), inset 0 1px 0 rgba(255, 204, 153, 0.7);
+
+ }
+
+ button:active{
+    box-shadow:0 0 0  rgba(255, 204, 153), inset 0 1px 0 rgba(255, 204, 153, 0.7);
+    transform:translateY(.25em);
+ }
+
+ 
+
+ button:disabled{
+   background-color:rgb(255, 102, 0 , 0.6);
+   background-image: linear-gradient(to bottom, rgb(247, 132, 0,0.6), rgba(255, 102, 0, 0.6));
+ }
+
+ .field-submit button{
+    width:100%;
+ }
+ /**
+   * Since fieldsets are notoriously hard to style, we'll just
+   * remove default styles from the fieldset and style a wrapper element
+   * instead.
+   * 1. Bug: Safari has a weird thing where the top margin from elements after
+   * the <legend> get shifted to the top of the fieldset. Setting a tiny
+   * amount of padding on the <fieldset> element counters this.
+   * 2. WebKit- and Blink-based browsers have a minimum width set to respect
+   * the default width of input fields. We override it with min-width here.
+   */
+   fieldset {
+      border: 0;
+      padding: 0.01em 0 0 0; /* 1 */
+      margin: 0;
+      min-width: 0; /* 2 */
+    }
+    /**
+    * Firefox browsers have a minimum width for fieldsets. The only way to
+    * override it is to change the display mode to table-*.
+    * The @-moz-document url-prefix() bit is a Mozilla-specific mechanism
+    * to allow users to override site-specific styles in user stylesheets.
+    * It works for author styles as well, so we might as well use it, even
+    * if it's an ugly hack. Leaving the url-prefix()-bit empty applies
+    * the rule for any URL.
+    * Note: this adds a couple of pixels of extra white-space after the
+    * fieldset.
+    */
+    @-moz-document url-prefix() {
+      fieldset {
+        display: table-cell;
+      }
+    }
+
+    legend {
+      padding: 0 0 .5em 0;
+      margin-bottom:0.5em;
+      font-weight: bold;
+      color: #777;
+      font-size:1.1em;
+      display: table;
+    }
+    label {
+      cursor: pointer;
+      font-weight:bold;
+      font-size:0.9em;
+    }
+
+    .fieldset-wrapper {
+      padding: 1em;
+
+      border: 1px solid #eee; /* 1 */
+      background-color: #fff;
+      border-radius:.25em;
+      box-shadow: 0 0 .25em #173b6d;
+    }
+
+    /**
+   * No border for more modern browsers.
+   */
+   :root .fieldset-wrapper {
+      border: 0;
+    }
+
+    .field-text{
+       margin-bottom:0.8em;
+    }
+
+   .field-text label,
+   .field-text input,
+   .field-text .form-help,
+   .field-text .form-error{
+     width: 95%;
+   }
+
+.field-text input{
+   padding: .375em .3125em .3125em;
+   border: 1px solid #ccc;
+   border-radius: .25em;
+}
+.field-text :focus {
+   outline: 0;
+   box-shadow: 0 0 .5em rgba(93, 162, 248, 0.5);
+   border-color: #5da2f8;
+}
+
+.field-check{
+   margin:0;
+}
+
+.field-check label{
+   display:block;
+}
+
+#register-form .field-check label{
+   margin-bottom:0.2em;
+}
+
+#register-form .field-check input{
+   margin:0 0.2em 2em 0.1em;
+}
+
+.form-help {
+   display: block;
+   /* hide the help by default,
+   without hiding it from screen readers */
+   position: absolute;
+   overflow: hidden;
+   width: 1px;
+   height: 1px;
+   clip: rect(0, 0, 0, 0);
+ }
+
+ .form-error{
+    display: none;
+ }
+
+ input.form-errore ~ .form-error,input:focus ~ .form-help{
+   display:block;
+   padding: .5em;
+   padding-right:0;
+   margin-top: .5em;
+   border: 1px solid #ff0033;
+   border-radius: .25em;
+   font-style: italic;
+   color: #737373;
+   background-color: #fff;
+ }
+
+ input.form-errore{
+   border:1px solid #ff0033;
+ }
+
+ input.form-errore:focus ~ .form-error{
+    display:none;
+    border: 1px solid #ccc;
+ }
+
+ input:focus ~ .form-help {
+   border: 1px solid #5da2f8;
+   position: static;
+   width: auto;
+   height: auto;
+   crop: none;
+ }
+
+
+
+ input.form-valid{
+    background-image: url('../../multimedia/icon/check-mark.png');
+    background-repeat: no-repeat;
+    background-position: right 0.5em center;
+ }
+
+#login-wrapper:target,#register-wrapper:target{
+   display:block;
+}
+
+
+.form-outer-wrapper{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background-color:rgba(255, 255, 255);
+   z-index:100;
+   display:none;
+}
+
+label[for='termini-condizioni'].form-errore{
+   color:#ff0033;
+}
+
+label[for='termini-condizioni'].form-errore::after{
+   content:"Accettare condizioni";
+   color:#ff0033;
+   float:right;
+   margin-right:0.1em;
+   font-size:smaller;
+}
+
+.form-inner-wrapper{
+   max-width:20em;
+   margin:0 auto;
+/*    margin-top:5vh;
+ */ }
+
+ /* #register-wrapper:target .form-inner-wrapper{
+   margin-top:5vh;
+
+} */
+
+ .form-wrapper h3{
+   text-align:center;
+ }
+
+ .form-inner-wrapper h3{
+    color:var(--colore-primo);
+    font-size:1.7em;
+    margin-bottom: 0.3em;
+ }
+
+ #login-form .register-container{
+   display:flex;
+   justify-content: space-between;
+   align-items: baseline;
+   flex-wrap:wrap;
+ }
+
+ .register-container #registrati{
+   color:orangered;
+   font-size:1.1em;
+   position:relative;
+   top:-1px;
+ }
+
+ #submit-register{
+   margin-top:0.5em;
+ }
+
+ .home-back{
+   position:relative;
+   top:30px;
+ }
+
+ .form-outer-wrapper a:link{
+   color:var(--colore-primo);
+}
+
+.form-outer-wrapper a:visited{
+   color:#ff4500;
+}
+
+.form-outer-wrapper a:hover,a:focus{
+   color:var(--colore-primo)
+}
+
+.form-outer-wrapper a:active{
+   color:#800;
+}
+
+.field-check input#termini-condizioni{
+   float:left;
+}
+
+input#termini-condizioni + span {
+   overflow:auto; 
+   color:#222;
+}
+/*#endregion MODULI*/
+
+/*#region HEADER*/
+body{
+   overflow-x: hidden; 
+}
+
+
+.content-header-footer{
+   background-color:var(--colore-quinto);
+}
+
+
+#header-template{
+   display:flex;
+   min-height: 200px;
+   align-items:center;
+   justify-content: space-between;
+}
+
+#logo-home-header{
+   display:flex;
+   align-items:center;
+   height:100px;
+}
+
+#logo-home-header img{
+   height:29.6px;
+   width:40px; /*Dimensioni derivate dall aspect ratio dell immagine*/
+}
+
+header h1#main-header{
+   font-size:1.5em;
+   font-weight:700;
+   transition: .3s;
+   /* font-style: italic; */
+}
+
+
+/*#region NAVBAR in HEADER*/
+
+a.hamburger-icon{
+   font-family: social,ristoranti,ristorante2;
+   font-size:1.1em;
+   color:var(--colore-secondo);
+   cursor:pointer;
+}
+
+a.hamburger-icon:before{
+   content:'e'; /* Hamburger in web-font-icon */
+}
+
+nav#menu-home{
+   width:0;
+   padding-top:2.2em;
+   position:absolute;
+   right:0;
+   top:0;
+   transition:width .3s;
+   z-index:2;
+}
+
+nav#menu-home:target{
+   background-color: #f96;
+   width:100%;
+   height:100%;
+}
+
+nav#menu-home > a.close-menu{
+   width:2em;
+   line-height:2em;
+   background-color:var(--colore-terzo);
+   background-color:rgba(102, 51, 0, 0.85);
+   color:var(--colore-secondo);
+   display:block;
+   position:absolute;
+   top:1.3em;
+   right:1.3em;
+   border-radius:50%;
+   font-family: social,ristoranti,ristorante2;
+   text-align:center;
+   display:none; /* Necessario altrimenti risulta visibile anche quando il menu è chiuso */
+}
+
+nav#menu-home > a.close-menu:hover{
+   background-color:var(--colore-terzo);
+}
+
+nav#menu-home:target > a.close-menu{
+   display:block;
+}
+
+nav#menu-home > a.close-menu:before{
+   content:'f';
+}
+
+
+nav#menu-home li{
+   padding:0.8em 0;
+}
+
+nav#menu-home li a{
+   display:block;
+   cursor:pointer;
+   color:var(--colore-terzo);
+   text-align:center;
+   font-size:1.5em;
+   outline:none;
+}
+
+nav#menu-home li a:hover{
+   font-size:1.6em;
+   font-weight:600;
+}
+
+nav#menu-home ul ul li{
+   padding:.5em 0;
+}
+
+nav#menu-home ul ul a{
+   box-sizing:border-box;
+   padding:0;
+   display:block;
+   margin:0 auto;
+   background-color:var(--colore-secondo);
+   font-family:social,ristoranti,ristorante2;
+}
+
+nav#menu-home ul ul li:nth-of-type(1) a:before{content:'b';}
+nav#menu-home ul ul li:nth-of-type(2) a:before{content:'c';}
+nav#menu-home ul ul li:nth-of-type(3) a:before{content:'d';}
+nav#menu-home ul ul li:nth-of-type(4) a:before{content:'a';}
+
+nav#menu-home ul ul a:hover{
+   background-color:var(--colore-quarto);
+   font-weight:400;
+}
+/*#endregion NAVBAR in HEADER*/
+/*#endregion HEADER*/
+
+/*#region TORNA SU*/
+   .tornaSu-wrapper{
+      position:fixed;
+      bottom:5px;
+      right:5px;
+      }
+
+   .tornaSu{
+      font-size:1.8em;
+      font-family:social;
+      display:block;
+      cursor: pointer;
+      text-align:center;
+      color: white;
+      background-color: rgba(255, 102, 0, 0.5);
+      opacity:0;
+      transition:1s;
+   }
+
+   .tornaSu-visibilita{
+      opacity:1;
+   }
+
+   .tornaSu:hover{
+      background-color:var(--colore-primo);
+   }
+
+   .tornaSu::before{
+      content:'j'
+   }
+/*#region TORNA SU*/
+
+/*#region FOOTER*/
+.table-template{
+   display:table;
+   height:100px;
+   table-layout: fixed;
+}
+
+.table-riga{
+   display:table-row ;
+   height:50%;
+}
+
+.table-cella{
+   display:table-cell; 
+   vertical-align:top;
+   text-align:center;
+   width:50%;
+}
+
+.table-cella:not(.table-cella-intestazione){
+   font-family:social,ristoranti,ristorante2;
+   font-size:1.4em;
+}
+
+.table-cella:first-of-type{
+   border-right:2px solid var(--colore-secondo);
+}
+
+.table-cella-intestazione{
+   vertical-align:bottom;
+   padding-bottom:0.4em;
+   font-size:1em;
+   text-align:center;
+}
+
+footer .table-cella img{
+   width:30px;
+   margin-right:5px;
+}
+
+
+footer .table-cella a{
+   color:var(--colore-terzo); 
+   background-color: var(--colore-secondo);
+   display:inline-block;
+}
+
+footer .table-cella a:hover{
+   background-color: var(--colore-quarto);
+}
+
+footer a.cerchio-social{
+   font-size:0.65em;
+}
+/*#endregion FOOTER*/
+
+/*#region ANIMATIONS*/
+@keyframes entrataLaterale{
+   from{width:0;}
+   to{width:100%;}
+}
+
+@keyframes uscitaBasso{
+   from{height:100%;}
+   to{height:0;}
+}
+
+@keyframes uscitaAlto{
+   from{transform:translateY(0);}
+   to{transform:translateY(100%);}
+}
+
+/*#endregion ANIMATIONS*/
+
+/*#region MEDIA QUERY */
+@media only screen and (min-width:26em){
+   /*LOGO HEADER CAMBIO DIMENSIONE*/
+   #logo-home-header img{
+      height:60px;
+      width:81px; /*Dimensioni derivate dall aspect ratio dell immagine*/
+   }
+
+   /*Cambio dimensione titolo*/
+   header h1#main-header{
+      font-size: 2.5em;
+   }
+
+   /*Cambio dimensione hamburger icon*/
+   a.hamburger-icon{
+      font-size:1.3em;
+   }
+
+
+   /*FOOTER*/
+   footer a.cerchio-social{
+      font-size:0.8em;
+   }
+
+   .table-cella-intestazione{
+      font-size:1.2em;
+   }
+
+   footer .table-cella img{
+      width:45px;
+      margin-right:10px;
+   }
+}
+
+@media only screen and (min-width:32em){
+   nav#menu-home:target{
+      width:50%;
+   }
+
+   /*Cambio dimensione hamburger icon*/
+   a.hamburger-icon{
+      font-size:1.7em;
+   }
+
+
+   /*FOOTER*/
+   .table-cella-intestazione{
+      font-size:1.5em;
+   }
+
+   footer a.cerchio-social{
+      font-size:1em;
+   }
+
+   footer .table-cella img{
+      width:60px;
+   }
+}
+
+@media only screen and (min-width:48em){
+   header h1#main-header{
+      font-size:3.5em;
+   }
+
+   /*TORNA SU*/
+   .tornaSu-wrapper{
+      bottom:20px;
+      right:35px;
+   }
+
+   /*FOOTER*/
+   footer .table-cella img{
+      width:70px;
+      margin-right:20px;
+   }
+}
+
+/*A circa 1000 pixel*/
+@media only screen and (min-width:63em){
+   /*REGOLE MENU*/
+      /*Nascondo l icona hamburger*/
+      a.hamburger-icon{
+         display:none;
+      }
+
+      nav#menu-home{
+         position:static;
+         width:auto;
+      }
+      nav#menu-home li{
+         display:inline-block;
+         margin-right: 0.3em;
+         padding:0;
+      }
+
+      /* Icone social a capo */
+      nav#menu-home > ul > li:last-of-type{
+         display:block;
+      }
+
+      nav#menu-home > ul > li > a{
+         color:var(--colore-secondo);
+      }
+
+      /* Centra le icone social*/
+      nav#menu-home ul ul {
+         text-align:center;
+      }
+
+      /* Serve perchè se hai il menu aperto con schermo piccolo ed ingrandisci lo schermo
+      il menu si deve chiudere da solo (perchè viene visualizzato sulla barra degli header)*/
+      /* nav#menu-home:target{
+         width:0;
+      } */
+
+      nav#menu-home:target{
+         background-color: transparent;
+         width:auto;
+         height:auto;
+      }
+
+      /*Stesso discorso di sopra per chiudere anche il bottone di chiusura X*/
+      nav#menu-home:target > a.close-menu{
+         display:none;
+      }
+}
+/*#endregion MEDIA QUERY */

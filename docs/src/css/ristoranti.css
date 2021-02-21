@@ -1,0 +1,238 @@
+@charset "utf-8";
+
+/*#region WEB-ICON-FONT */
+@font-face {
+   font-family: 'ristoranti';
+   src: url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.eot?');
+   src: url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.eot?#iefix') format('embedded-opentype'),
+         url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.woff2') format('woff2'),
+         url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.woff') format('woff'),
+         url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.ttf') format('truetype'),
+         url('../../multimedia/icon/web-font-icon-ristoranti/ristoranti.svg#ristoranti') format('svg');
+}
+/*#endregion WEB-ICON-FONT */
+
+/*#region RISTORANTI*/
+.content-wrapper{
+   width:100%;
+}
+
+#ristoranti header{
+   margin:2em auto;
+   font-size:1.5em;
+}
+
+#ristoranti header h2{
+   color:var(--colore-terzo);
+}
+
+.nessun-ristorante-header{
+   padding-top:50px;
+}
+
+/* section #ristoranti{
+  
+} */
+
+.ristoranti-item{
+   display:flex;
+   flex-direction:column;
+   min-height:50px;
+   background-color: white;
+   margin:15px;
+   box-shadow:0 0 10px 2px var(--colore-quinto);
+   font-size:0.8em;
+   color:#333;
+   box-shadow:0 0 10px 2px var(--colore-quinto);
+
+}
+
+/*Le immagini sono di dimensioni fisse cioè
+436x161px da cui deriva l altezza di 36.9% per conservare
+l aspect-ratio.*/
+.ristoranti-item-immagine{
+   width:100%;
+   padding-bottom:36.9%;
+   height:0;
+   position:relative;
+}
+
+.ristoranti-item-immagine img{
+   width:100%;
+   height:100%;
+   position:absolute;
+}
+
+/*Serve per correggere un'imperfezione del tag picture che lascia dello spazio aggiuntivo*/
+.ristoranti-item-info{
+   display:flex;
+   padding:10px;
+   margin-top:-3px; /*[1]*/
+   overflow:hidden;
+}
+
+.ristoranti-item-info img{
+   width:50px;
+   height:50px;
+   margin-right:10px;
+   box-shadow: 0 0 10px 2px var(--colore-quinto);
+}
+
+ristoranti-item-info-testuali{
+   display:flex;
+   flex-direction:column;
+}
+
+.ristoranti-item-info-testuali-titolo{
+   font-family:Vidaloca;
+   color:red;
+}
+
+.ristoranti-item-info-testuali-titolo a{
+   display:block;
+   color:var(--colore-terzo);
+   font-weight:500;
+   text-decoration:underline;
+}
+
+.ristoranti-item-info-testuali-tipo{
+   margin-top:5px;
+}
+
+.ristoranti-item-info-consegna{
+   padding:10px;
+   display:flex;
+   flex-direction: column;
+}
+
+.ristoranti-item-info-consegna > *{
+   line-height:1.4em;
+}
+
+.ristoranti-item-info-consegna-ordine{
+   display:flex;
+   flex-wrap: wrap;
+}
+
+.ristoranti-item-info-consegna-ordine-costominimo,.ristoranti-item-info-consegna-ordine-costo{
+   flex-shrink: 0;
+}
+
+
+.ristoranti-item-info-consegna-ordine-costominimo{
+   margin-left:1.1em;
+}
+
+
+
+
+
+.ristoranti-item-info-consegna-distanza::before,.ristoranti-item-info-consegna-tempo::before,.ristoranti-item-info-consegna-ordine-costo::before{
+   width:1.1em;
+   font-family:ristoranti;
+   text-shadow:0.1px 0.1px 0.1px red;
+   content:'h';
+   display:inline-block;
+}
+
+.ristoranti-item-info-consegna-tempo::before{
+   content:'i';
+}
+
+.ristoranti-item-info-consegna-ordine-costo::before{
+   content:'g';
+}
+
+span.valuestyle{
+   text-shadow:0.1px 0.1px 0.1px red;
+}
+/*#endregion RISTORANTI*/
+
+/*#region FOOTER */
+footer.content-header-footer{
+   margin-top:100px;
+}
+
+
+.nessun-ristorante-footer{
+   position:fixed;
+   left:0;
+   bottom:0;
+   z-index:100;
+   background-color:var(--colore-quinto);
+   right:0;
+}
+/*#endregion FOOTER*/
+
+/*#region MEDIA QUERY*/
+
+
+@media only screen and (min-width:17em){
+   .ristoranti-item{
+      font-size: 1em;
+   }
+}
+
+@media only screen and (min-width:26em){
+   .ristoranti-item{
+      font-size: 1.1em;
+   }
+}
+
+
+@media only screen and (min-width:48em){
+   main .content-wrapper{
+      max-width:48em;
+   }
+
+   
+   .nessun-ristorante-header{
+      font-size:2em;
+   }
+
+   .ristoranti-item{
+      flex-direction: row;
+      height:100px;
+      position:relative;
+      cursor:pointer;
+   }
+
+   .ristoranti-item-immagine{
+      width:120px;
+      padding-bottom:80px;
+      clip-path: inset(5px 5px round 5px);
+   }
+   
+   .ristoranti-item-info{
+      overflow:visible;
+   }
+
+   .ristoranti-item-info img{
+      position:absolute;
+      left:90px;
+      top:15px;
+   }
+  
+    
+
+   .ristoranti-item-info-testuali{
+      position:relative;
+      left:30px;
+      top:5px;
+   }
+   .ristoranti-item-info-consegna{
+      position:relative;
+      left:40px;
+   }
+
+
+
+
+   /* .ristoranti-item-immagine{
+      width:150px;
+      height:150px;
+   } */
+
+}
+
+/*#endregion MEDIA QUERY*/

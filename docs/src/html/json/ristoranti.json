@@ -1,0 +1,77 @@
+{
+   "ristoranti":[
+      {
+         "foto":"ristorante1.webp",
+         "logo":"logo1.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"La cannoleria siciliana",
+         "tipo":["dolci" , "pasticceria"],
+         "costo_consegna":0,
+         "costo_ordine_minimo":5,
+         "max_distanza_consegna":5,
+         "locazione":"Viale della Vittoria, 1, 92100 Agrigento AG, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      },
+
+      {
+         "foto":"ristorante2.webp",
+         "logo":"logo2.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"Nino u' Ballerino",
+         "tipo":["street food","gastronomia"],
+         "costo_consegna":1,
+         "costo_ordine_minimo":10,
+         "max_distanza_consegna":5,
+         "locazione":"Via Atenea, 2, 92100 Agrigento AG, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      },
+      {
+         "foto":"ristorante3.webp",
+         "logo":"logo3.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"Don Chisciotte Bistrot",
+         "tipo":["hamburger","panini"],
+         "costo_consegna":1.5,
+         "costo_ordine_minimo":5,
+         "max_distanza_consegna":10,
+         "locazione":"Via Esseneto, 1, 92100 Agrigento AG, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      },
+      {
+         "foto":"ristorante4.webp",
+         "logo":"logo4.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"La grotta della Vucciria",
+         "tipo":["siciliano","gastronomia"],
+         "costo_consegna":1,
+         "costo_ordine_minimo":5,
+         "max_distanza_consegna":6,
+         "locazione":"Via Messina Marine, 121, 90123 Palermo PA, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      },
+      {
+         "foto":"ristorante5.webp",
+         "logo":"logo5.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"Takumi",
+         "tipo":["giapponese","sushi"],
+         "costo_consegna":0,
+         "costo_ordine_minimo":15,
+         "max_distanza_consegna":10,
+         "locazione":"Via Principe di Belmonte, 1, 90139 Palermo PA, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      },
+      {
+         "foto":"ristorante6.webp",
+         "logo":"logo6.gif",
+         "pathfoto":"multimedia/img/ristoranti/",
+         "nome":"Atelier del pesce",
+         "tipo":["pesce","gastronomia"],
+         "costo_consegna":1,
+         "costo_ordine_minimo":4,
+         "max_distanza_consegna":5,
+         "locazione":"Via Maqueda, 58, 90133 Palermo PA, Italia",
+         "indirizzoWeb":"ristorante2.html"
+      }
+   ]
+}

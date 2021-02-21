@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+/*#region WEB-ICON-FONT */
+@font-face {
+   font-family: 'ristorante2';
+   src: url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.eot?');
+   src: url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.eot?#iefix') format('embedded-opentype'),
+         url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.woff2') format('woff2'),
+         url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.woff') format('woff'),
+         url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.ttf') format('truetype'),
+         url('../../multimedia/icon/web-font-icon-ristorante2/ristorante2.svg#ristorante2') format('svg');
+}
+/*#endregion WEB-ICON-FONT */
+
+/*#region HEADER*/
+
+#page-header{
+   position:fixed;
+   top:0;
+   left:0;
+   width:100%;
+   z-index:10;
+}
+
+#header-template{
+   min-height:70px;
+
+}
+
+#page-header .content-wrapper{
+   width:100%;
+}
+
+#logo-home-header{
+   height:50px;
+   display:none;
+   margin:auto;
+}
+
+#logo-home-header img{
+   height:27px;
+   width:36.48px; /*Dimensioni derivate dall aspect ratio dell immagine*/
+}
+
+header h1#main-header{
+   font-size:1.2em;
+   margin-right:auto;
+   display:none;
+}
+
+#hamburger-container{
+   order:-1;
+   margin-left:2px;
+}
+/*CARRELLO*/
+ .carrello{
+   box-sizing: border-box;
+   height:70px;
+   min-width:80px;
+   width:20%;
+   background-color: var(--colore-secondo);
+   text-align:center;
+   padding:25px 0;
+   text-shadow:0.1px 0.1px 0.1px red;
+   color:var(--colore-terzo);
+   position:relative;
+}
+
+.carrello p{
+   position:absolute;
+   display:inline-block;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.carrello-prezoTotaleAcquisti{
+   white-space: pre;
+   margin-right:2px;
+}
+
+.carrello-cartContainer{
+   display:flex; 
+   flex-direction:column; 
+   align-content:center; 
+   position:relative;
+   left:0px;
+}
+
+.carrello-numAcquisti{
+   font-family:Arial,'Helvetica Neue', Helvetica, sans-serif;
+   font-size:1.3em;
+   position:relative;
+   top:2px;
+} 
+
+.carrello-cart-icon{
+   font-family:ristorante2;
+   font-size:1.1em;
+}
+
+.carrello-cart-icon::before{
+   content:'g';
+}
+
+/*BOTTONE ORDINA*/
+#header-ordina{
+   background-color: var(--colore-secondo);
+   height:70px;
+   line-height:70px;
+   width:5.25em;
+   text-align:center;
+   margin-right:10px;
+}
+
+#header-ordina button{
+   width:80%; 
+   padding:0.5em;
+   text-shadow:0.1px 0.1px 0.1px red;
+   color:var(--colore-terzo);
+}
+
+/*SIDE BAR HIDDEN*/
+
+nav#menu-home{
+   left:0;
+   position:fixed;
+   visibility:hidden;
+}
+
+nav#menu-home:target{
+   z-index:100;
+   visibility:visible;
+}
+/*#endregion HEADER*/
+
+/*#region MENU*/
+   main[role='main']{
+      margin-top:30px;
+      padding-top:70px; /* Per contrastare il posizionamento fixed dell header */
+   }
+
+
+   #ristorante-about{
+      max-width:28.6em;
+   }
+   .logo-ristorante{
+      width:30px;
+      height:30px;
+      display:inline-block;
+      margin-right:3px;
+      margin-bottom:5px;
+   }
+
+   .ristorante-info{
+      display:inline-block;
+      vertical-align:top;
+   }
+
+   .ristorante-locazione{
+      display:block;
+      font-style:italic;
+      text-shadow:0.1px 0.1px 0.1px red;
+      color:var(--colore-terzo);
+      text-align:left;
+   }
+
+   .ristorante-titolo{
+      font-size:1em;
+      color:var(--colore-terzo);
+      text-align:left;
+   }
+
+   section#description{
+      display:inline-block;
+      text-align:left;
+      line-height:1.4;
+      font-size:1.1em;
+      /* max-width:26em; */
+      box-sizing:border-box;
+      color:#222;
+      border-radius:3px;
+      background-color: rgba(245, 222, 179, 0.123);
+      text-shadow:0.1px 0.1px 0.1px red;
+      padding:10px 5px 10px 0;
+      box-shadow:inset 0px 11px 8px -10px var(--colore-quinto), 
+      inset 0px -11px 8px -10px var(--colore-quinto) ;
+      margin-top:5px;
+      word-wrap: break-word;
+   }
+
+   /*ARTICOLI MENU*/
+   #menu > header:first-of-type{
+      margin:25px 0;
+      margin-bottom:35px;
+   }
+
+   #menu h2{
+      font-size:1.6em;  
+   }
+
+   #menu h2,#menu h3,#menu h4{
+      text-shadow:0.2px 0.2px 0.2px red; /* Per h4 non uso text-shadow infatto lo nego in una regola sotto */
+      color:var(--colore-terzo);
+      text-align: left;
+   }
+
+   #menu h3{
+      font-size:1.4em;
+   }
+
+   .menu-categoria{
+      margin-bottom: 20px;
+   }
+
+   .menu-categoria-item{
+      display:flex;
+      flex-direction:column;
+      border-bottom:1px groove rgba(255, 68, 0, 0.699);
+      margin-bottom:3em;
+      cursor:pointer;
+   }
+
+   .menu-categoria-item-container{
+      min-width:11em;
+      flex:1 1 auto;
+      margin-bottom:10px;
+   }
+
+   .menu-categoria-item-description{
+      text-align:left;
+      color:#111;
+   }
+
+   .menu-categoria-item-container2{
+      display:flex;
+      flex:0 0 auto;
+   }
+
+   .menu-categoria-item-title{
+      margin-bottom: 10px;
+   }
+
+   /* Necessario aggiungere anche #menu per fare aumnetare la specificità per vincere un conflitto */
+   #menu .menu-categoria-item-title h4{
+      font-size:1.15em;
+      color: var(--colore-terzo);
+      text-shadow:none;
+   }
+
+   .menu-categoria-item-price{
+      color: var(--colore-terzo);
+   }
+
+   .menu-categoria-item-button{
+      width:30px;
+      height:30px;
+      line-height:30px;
+      text-align:center;
+      border:1px solid var(--colore-terzo);
+      transform:translateY(-25%); 
+      margin-left:5px;
+      background-color:var(--colore-primo);
+      color:var(--colore-terzo);
+      font-weight:bold;
+      border-radius:2px;
+      cursor:pointer;
+   }
+/*#endregion MENU*/
+
+/*#region ASIDE ORDINE*/
+aside#box-ordina{
+   vertical-align:top;
+   min-width:none;
+   min-height:11.2em;
+   display:none;
+   padding:10px;
+   box-sizing:border-box;
+   margin-left:1em;
+   border-radius:3px;
+   box-shadow:  0 0 6px 3px var(--colore-secondo);
+   font-size:1.15em;
+   background-color: rgba(255, 255, 255, 0.6);
+   color:var(--colore-terzo);
+
+}
+
+.box-ordina-totale{
+   display:flex;
+   justify-content: space-between;
+   background-color: rgba(255, 153, 102, 0.363);
+   padding:0.3em 0.05em;
+}
+
+.box-ordina-totale span:first-of-type{
+   font-size:1.2em;
+   font-weight:bold;
+}
+
+.box-ordina-ordineMinimo span:last-of-type{
+   font-weight:600;
+}
+
+.box-ordina-costoConsegna{
+   font-weight:600;
+   border:2px solid var(--colore-primo);
+   padding:0.25em 0;
+   color:var(--colore-primo);
+}
+/*#endregion ASIDE ORDINE*/
+
+
+/*#region MEDIA QUERY */
+
+@media only screen and (min-width:250px){
+   header #logo-home-header{
+      display:flex;
+   }
+}
+
+@media only screen and (min-width:18.5em){
+   .table-template{
+      height:70px;
+   }
+}
+
+@media only screen and (min-width:26em){
+  
+   header #logo-home-header{
+      margin-left:auto;
+      margin-right:5px;
+   }
+
+   header #logo-home-header img{
+      margin-right:5px;
+   }
+   
+   header h1#main-header{
+      display:block;
+      font-size:1.7em;
+      margin-right:auto;
+   }
+
+   /*MENU*/
+
+   .logo-ristorante{
+      width:50px;
+      height:50px;
+   }
+
+   .ristorante-titolo{
+      font-size:1.3em;
+   }
+
+   .menu-categoria-item{
+      flex-direction:row;
+   }
+
+}
+
+@media only screen and (min-width:32em){
+   
+   /*FOOTER*/
+   .table-template{
+      height:100px;
+   }
+
+   /*HEADER*/
+   header h1#main-header{
+      font-size:2em;
+      margin-right:auto;
+   }
+
+   /*MENU*/
+   #ristorante-about{
+      text-align:center;
+      display:inline-block;
+   }
+
+   .ristorante-titolo{
+      font-size:1.5em;
+   }
+
+   .content-wrapper{
+      text-align:center;
+   }
+
+   /*CARRELLO*/
+   .carrello-cartContainer{
+      left:7px;
+   }
+}
+
+@media only screen and (min-width:48em){
+   main[role='main']{
+      padding-top:0;
+   }
+
+   /*HEADER*/
+
+   #page-header{
+      position:static;
+   }
+
+   #header-ordina{
+      display:none;
+   }
+
+   .carrello-prezoTotaleAcquisti{
+      font-size:1.1em;
+   }
+
+   .carrello-cartContainer{
+      font-size:1.3em;
+   }
+
+   /*MENU*/
+   #ristorante-about{
+      text-align:left;
+   }
+
+   /* ASIDE BOTTONE */
+   aside#box-ordina{
+      display:inline-block; /* fallback */
+      display:inline-flex;
+      flex-direction:column;
+      justify-content:space-around;
+
+   }
+}
+
+@media only screen and (min-width:63em){
+   /*LOGO HEADER CAMBIO DIMENSIONE*/
+   header #logo-home-header img{
+      height:60px;
+      width:81px; /*Dimensioni derivate dall aspect ratio dell immagine*/
+   }
+
+   header h1#main-header{
+      font-size:3.5em;
+      margin-right:auto;
+   }
+
+   nav#menu-home{
+      position:static;
+      visibility:visible;
+   }
+
+   /*CARRELLO*/
+   .carrello{
+      min-height:112px;
+   }
+
+   .carrello-prezoTotaleAcquisti{
+      font-size:1.3em;
+   }
+
+   .carrello-cartContainer{
+      font-size:1.5em;
+   }
+
+   /*MENU*/
+   .ristorante-titolo{
+      font-size:1.8em;
+   }
+
+   .logo-ristorante{
+      width:80px;
+      height:80px;
+   }
+
+   section#description{
+      line-height:1.4;
+      font-size:1.2em;
+   }
+
+   /*ASIDE*/
+   aside#box-ordina{
+      min-height:13.2em;
+      min-width: 16em;
+     
+   
+   }
+  
+}
+
+/*#endregion MEDIA QUERY */

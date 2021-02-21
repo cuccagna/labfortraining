@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Hash food. Servizio di consegna cibo a domicilio.">
+   <meta name="keywords" content="Hash Food, #Food , food delivery , cibo a domicilio"> 
+   <meta name="author" content="Nicola Ciaco">
+
+   <link rel="apple-touch-icon" sizes="180x180" href="../../multimedia/icon/apple-touch-icon.png">
+   <link rel="icon" type="image/x-icon" href="../../multimedia/icon/favicon.ico" />
+   <link rel="icon" type="image/png" sizes="32x32" href="../../multimedia/icon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="../../multimedia/icon/favicon-16x16.png">
+   <link rel="manifest" href="../../multimedia/icon/site.webmanifest">
+
+   <title>Ristoranti vicini</title>
+   <link href="../css/main.css" rel="stylesheet">
+   <link href="../css/ristoranti.css" rel="stylesheet">
+
+</head>
+<body>
+   <header id='main-header'>
+      <div class='content-header-footer'>
+         <div class="content-wrapper" id="header-template">
+            <div id="logo-home-header">
+               <img src="../../multimedia/img/logo.png" alt='Vespa Logo del sito' title='Logo del sito'/>
+            </div>
+
+            <h1 id='main-header'>HASHFOOD</h1>
+            <div>
+               <a href='#menu-home' class='hamburger-icon' aria-label='Clicca per aprire il menu'></a>
+               <nav id='menu-home'>
+                  <a href='#' class='close-menu' aria-label='Clicca per chiudere il menu'></a>
+                  <ul>
+                     <li><a href="../../index.html" tabindex="1" accesskey="1" title='Usa combinazione tasti tuo sistema + 1 per accesso diretto'>Home</a></li>
+                     <li><a href="#" tabindex="2" accesskey="2" title='Usa combinazione tasti tuo sistema + 2 per accesso diretto'>Accedi</a></li>
+                     <li><a href="#" tabindex="3" accesskey="3" title='Usa combinazione tasti tuo sistema + 3 per accesso diretto'>Ristoranti</a></li>
+                     <li>
+                        <ul>
+                           <li><a href='#' tabindex="4" accesskey="4" title='Vai alla nostra pagina facebook. Usa combinazione tasti tuo sistema + 4 per accesso diretto'class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="5" accesskey="5" title='Vai alla nostra pagina twitter. Usa combinazione tasti tuo sistema + 5 per accesso diretto' class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="6" accesskey="6" title='Vai alla nostra pagina instagram. Usa combinazione tasti tuo sistema + 6 per accesso diretto' class='cerchio-social'></a></li>
+                           <li><a href='#' tabindex="7" accesskey="7" title='Vai alla nostra pagina youtube. Usa combinazione tasti tuo sistema + 7 per accesso diretto' class='cerchio-social'></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+
+         </div>
+      </div>
+
+   </header>
+
+   <main role='main'>
+      <section id='ristoranti' class='content-wrapper'>
+         
+
+      </section>
+      
+   </main>
+   
+   <footer class='content-header-footer'>
+      <div class=' content-wrapper table-template'>
+         <div class='table-riga'>
+         <span class='table-cella table-cella-intestazione'><h3>Seguici</h3></span>  
+         <span class='table-cella table-cella-intestazione'><h3>Metodi di pagamento</h3></span> 
+         </div> 
+         <div class='table-riga'>
+         <span class='table-cella'>
+            <a href='#' class='cerchio-social'>b</a>
+            <a href='#' class='cerchio-social'>c</a>
+            <a href='#' class='cerchio-social'>d</a>
+            <a href='#' class='cerchio-social'>a</a>
+         </span>
+         <span class='table-cella'>
+            <img src="../../multimedia/icon/mastercard.svg" title='Mastercard' alt='Mastercard'>
+            <img src="../../multimedia/icon/paypal.svg" title='Paypal' alt='Paypal'>
+            <img src="../../multimedia/icon/visa.svg" title='Visa' alt='Visa'>
+         </span>
+      </div>
+      <div>
+   </footer>
+
+   
+
+   <script type="text/javascript" id='wfscript'>
+      /*Sintassi per usare font che sono sul mio server. no su google o altrove*/
+      WebFontConfig = {
+         custom: {
+         families: ['Vidaloca:n4', 'Hashfood:n4'],
+         urls: ['../css/hashfood-vidaloca.css']
+         }
+      };
+   
+      //creazione dinamica di uno script
+      (function() {
+      let s=document.getElementById('wfscript');
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+      wf.type = 'text/javascript';
+      s.parentNode.insertBefore(wf, s);
+    })();
+   </script>
+
+<script src='../js/ristoranti.js'></script>
+</body>
+</html>
