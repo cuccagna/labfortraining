@@ -615,7 +615,7 @@ window.addEventListener('load',()=>{
       clearTimeout(carouselId);
       //Negli schermi sotto i 768 pixel non uso il carosello e in questi
       //casi ripristino la prima immagine come immagine fissa
-      replacePictureInHTML(createNodePicture(pathImmagini[0]));
+      replaceMarkupPictureInHTML(createMarkupPicture(pathImmagini[0]));
    }
 
    function handleCarousel(avantiIndietro){
@@ -627,21 +627,18 @@ window.addEventListener('load',()=>{
       else{
          numImmagine = ++numImmagine % pathImmagini.length;
       }
-      let pictureNode = createNodePicture(pathImmagini[numImmagine]);
-      replacePictureInHTML(pictureNode);
+      let markup = createMarkupPicture(pathImmagini[numImmagine]);
+      replaceMarkupPictureInHTML(markup);
       carouselId = setTimeout(handleCarousel , 5000);
    }
 
-   function replacePictureInHTML(pictureToInsert){
-      let pictureToReplace = document.getElementById('picture-carousel');
-      let pictureElParent  = pictureToReplace.parentNode;
-      pictureElParent.replaceChild(pictureToInsert,pictureToReplace);
+   function replaceMarkupPictureInHTML(markup){
+      let pictureNode = document.getElementById('picture-carousel');
+      pictureNode.innerHTML = markup;
    }
 
-   function createNodePicture(imageName){
-         let pictureEl = document.createElement('picture');
-         pictureEl.id  = 'picture-carousel';
-
+   function createMarkupPicture(imageName){
+         
          const markup = `          
             <source media="(min-width:50em)" srcset="${imageName}_big.jpg"> 
             <source media="(min-width:37.5em)" srcset="${imageName}_large.jpg"> 
@@ -649,9 +646,8 @@ window.addEventListener('load',()=>{
             <source  srcset="${imageName}_small.jpg"> 
             <img src='${imageName}_large.jpg' title='Hashfood n° 1 in Italia' alt='Immagine Hashfood n° 1 in Italia'>
          `
-         pictureEl.innerHTML = markup;
 
-         return pictureEl;
+         return markup;
          
       }
 
