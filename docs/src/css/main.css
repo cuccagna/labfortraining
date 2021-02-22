@@ -809,22 +809,22 @@ footer a.cerchio-social{
          display:none;
       }
 }
-      @media only screen and (max-height:400px){
+
+@media only screen and (max-height:400px){
    
 
-         nav#menu-home > ul > li:last-of-type ul{
-            text-align:center;
-         }
-      
-         nav#menu-home > ul > li:last-of-type ul li{
-            display:inline-block;
-         }
-      }
-      
-      @media only screen and (max-height:300px){
-         nav#menu-home > ul > li{
-            padding:0.4em;
-         }
-      }
+   nav#menu-home > ul > li:last-of-type ul{
+      text-align:center;
+   }
 
+   nav#menu-home > ul > li:last-of-type ul li{
+      display:inline-block;
+   }
+}
+
+@media only screen and (max-height:300px){
+   nav#menu-home > ul > li{
+      padding:0.4em;
+   }
+}
 /*#endregion MEDIA QUERY */
