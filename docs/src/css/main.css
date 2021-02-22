@@ -808,7 +808,7 @@ footer a.cerchio-social{
       nav#menu-home:target > a.close-menu{
          display:none;
       }
-
+}
       @media only screen and (max-height:400px){
    
 
@@ -826,5 +826,5 @@ footer a.cerchio-social{
             padding:0.4em;
          }
       }
-}
+
 /*#endregion MEDIA QUERY */
