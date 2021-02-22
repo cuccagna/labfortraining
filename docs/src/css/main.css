@@ -808,5 +808,23 @@ footer a.cerchio-social{
       nav#menu-home:target > a.close-menu{
          display:none;
       }
+
+      @media only screen and (max-height:400px){
+   
+
+         nav#menu-home > ul > li:last-of-type ul{
+            text-align:center;
+         }
+      
+         nav#menu-home > ul > li:last-of-type ul li{
+            display:inline-block;
+         }
+      }
+      
+      @media only screen and (max-height:300px){
+         nav#menu-home > ul > li{
+            padding:0.4em;
+         }
+      }
 }
 /*#endregion MEDIA QUERY */
