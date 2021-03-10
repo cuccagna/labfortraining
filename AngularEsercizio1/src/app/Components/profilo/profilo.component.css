@@ -1,0 +1,17 @@
+h1 {
+  font-size: 3.2em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.7em;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

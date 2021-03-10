@@ -1,0 +1,28 @@
+<header>
+   <h2>Profilo</h2>
+</header>
+
+<div class="example-form">
+   <mat-form-field class="example-full-width">
+      <mat-label>Nome</mat-label>
+      <input [(ngModel)]="nome" matInput placeholder="Nome" value="">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Cognome</mat-label>
+      <input [(ngModel)]="cognome" matInput placeholder="Cognome" value="">
+   </mat-form-field>
+
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Codice Fiscale</mat-label>
+      <input [(ngModel)]="codiceFiscale" autocomplete='off' matInput placeholder="Codice Fiscale" value="">
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+      <mat-label>Parlaci di te</mat-label>
+      <textarea [(ngModel)]="about" matInput placeholder="Parlaci di te..."></textarea>
+   </mat-form-field>
+
+   <button mat-raised-button color="primary" [disabled]="isDisabledTest()" (click)="handleSalvaDati()">Salva Dati</button>
+</div>
