@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Partite arbitrate in stagione</h2>
+
+<mat-dialog-content>
+   <div >
+      <ol>
+         <li *ngFor="let item of partite">
+            {{item}}
+         </li>
+      </ol>
+   </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+   <button class="mat-raised-button" (click)="close()">Close</button>
+</mat-dialog-actions>

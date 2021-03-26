@@ -1,0 +1,76 @@
+<form [formGroup]="refereeForm" id='refereeForm' (ngSubmit)="onRefereeSubmit()">
+
+   <mat-form-field id="referee-form-nome" appearance="fill" floatLabel="always">
+      <mat-label>Nome</mat-label>
+      <input [formControl]="name" matInput placeholder="Nome arbitro" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="name.invalid">Devi inserire un nome</mat-error>
+   </mat-form-field>
+
+   <mat-form-field id="referee-form-cognome" appearance="fill" floatLabel="always">
+      <mat-label>Cognome</mat-label>
+      <input [formControl]="surname" matInput placeholder="Cognome arbitro" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="surname.invalid">Devi inserire un cognome</mat-error>
+   </mat-form-field>
+
+   <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Sezione</mat-label>
+      <input [formControl]="sezione" matInput placeholder="Sezione di appartenenza" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="sezione.invalid">Devi inserire una sezione</mat-error>
+   </mat-form-field>
+
+   <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Categoria</mat-label>
+      <mat-select [formControl]="categoria" required>
+         <mat-option>-- Nessuna --</mat-option>
+         <mat-option value="Serie A">Serie A</mat-option>
+         <mat-option value="Serie B">Serie B</mat-option>
+      </mat-select>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="categoria.invalid">Devi scegliere una categoria</mat-error>
+   </mat-form-field>
+
+
+   <mat-form-field appearance="fill" hintLabel='Min 1' floatLabel="always">
+      <mat-label>Anzianità</mat-label>
+      <input type="number" [formControl]="anzianita" matInput placeholder="Anni di arbitraggio" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="anzianita.invalid">{{getAnzianitaErrorMessage()}}</mat-error>
+      <mat-hint align='end'>Max 32</mat-hint>
+   </mat-form-field>
+
+   <mat-form-field appearance="fill" hintLabel='Min 16' floatLabel="always">
+      <mat-label>Anni</mat-label>
+      <input type="number" [formControl]="anni" matInput placeholder="Età dell'arbitro" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="anni.invalid">{{getAnniErrorMessage()}}</mat-error>
+      <mat-hint align='end'>Max 47</mat-hint>
+   </mat-form-field>
+
+   <mat-form-field appearance="fill" hintLabel='Min 8' floatLabel="always">
+      <mat-label>Media Voto</mat-label>
+      <input type="number" [formControl]="mediaVoto" matInput placeholder="Ex: 8.3" required>
+      <mat-icon color='primary' matSuffix>sports</mat-icon>
+      <mat-error *ngIf="mediaVoto.invalid">Media Voto inserita invalida</mat-error>
+      <mat-hint align='end'>Max 8.7</mat-hint>
+   </mat-form-field>
+
+   <div id="referee-form-partite-container">
+   <mat-form-field  appearance="fill" hintLabel='Separa più gare con un accapo' floatLabel="always">
+      <mat-label>Partite arbitrate</mat-label>
+      <textarea cdkTextareaAutosize cdkAutosizeMinRows="3"[formControl]="partiteArbitrate" matInput placeholder="Ex:
+      Chievo - Roma 
+      Milan - Napoli"> </textarea>
+      <mat-error *ngIf="partiteArbitrate.invalid">Formato delle partite non valido</mat-error>
+   </mat-form-field>
+   </div>
+
+   <button type='submit' color='primary' mat-raised-button [disabled]="refereeForm.status === 'INVALID'">Aggiungi Arbitro</button>
+
+  
+
+</form>
+
+<div>&nbsp;</div>
