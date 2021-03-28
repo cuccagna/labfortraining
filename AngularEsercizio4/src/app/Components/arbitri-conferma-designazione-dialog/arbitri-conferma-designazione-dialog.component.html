@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Conferma la designazione:</h2>
+
+<mat-dialog-content>
+   <div>Vuoi designare l'arbitro <strong>{{infoPartitaArbitro.nomeArbitro}}</strong></div>
+   <div>per la partita <strong>{{infoPartitaArbitro.partita}}</strong></div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+   <button class="mat-raised-button"  (click)="close('SI')" cdkFocusInitial>SI</button>
+   <button class="mat-raised-button"  (click)="close('NO')">NO</button>
+</mat-dialog-actions>
