@@ -1,0 +1,48 @@
+form#refereeForm {
+  width: 70%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #5d7ad3;
+  box-shadow: 0 0 5px 5px #5d7ad3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: whitesmoke;
+  min-height: 900px;
+  margin-bottom: 20px;
+}
+
+form#refereeForm mat-form-field,
+form#refereeForm div#referee-form-partite-container {
+  width: 90%;
+}
+
+form#refereeForm div#referee-form-partite-container mat-form-field {
+  width: 100%;
+}
+
+@media only screen and (min-width: 760px) {
+  form#refereeForm {
+    justify-content: space-between;
+    min-height: 600px;
+  }
+
+  form#refereeForm mat-form-field {
+    width: 45%;
+  }
+
+  form #referee-form-partite-container {
+    flex-basis: 100%;
+  }
+
+  form#refereeForm #referee-form-partite-container mat-form-field {
+    width: 100%;
+    margin-right: auto;
+  }
+
+  form#refereeForm button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

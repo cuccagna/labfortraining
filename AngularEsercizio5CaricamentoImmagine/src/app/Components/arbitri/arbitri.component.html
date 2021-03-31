@@ -1,0 +1,40 @@
+<div class='aggiungi-arbitro'  >
+<button *ngIf="displayReferees" mat-raised-button color='primary' (click)='displayComponents(false);'>Aggiungi Arbitro</button>
+</div>
+
+<app-aggiungi-arbitro *ngIf="displayAddReferee" (addReferree) = "onRefereeSubmit($event)"></app-aggiungi-arbitro>
+
+<ng-container *ngIf="displayReferees">
+   <mat-card *ngFor="let item of arbitri"  class="referee-card">
+      <mat-card-header>
+         <div mat-card-avatar class="referee-header-image" [ngStyle]="pathAvatar(item.foto)"></div>
+         <mat-card-title>{{item.nome}}</mat-card-title>
+         <mat-card-subtitle>Sezione di {{item.sezione}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="path(item.foto)" [alt]="item.nome">
+      <mat-card-content>
+         <p>
+            <span class="referee-list-item">Anni: </span><span>{{item.anni}}</span>
+         </p>
+         <p>
+            <span class="referee-list-item">Anzianità: </span><span>{{item.anzianita}}</span>
+         </p>
+
+         <p>
+            <span class="referee-list-item">Media voto: </span><span>{{item.mediaVoto}}</span>
+         </p>
+
+         <p>
+            <span class="referee-list-item">Categoria: </span><span class="no-accapo">{{item.categoria}}</span>
+         </p>
+      </mat-card-content>
+      <mat-card-actions>
+         <button mat-raised-button color='primary' (click)="openDialog(item.partiteArbitrate)">Partite Dirette</button>
+         <div id='button-designa'>
+            <button mat-raised-button color='primary' *ngIf="sharedService.isThereDesignation && !alreadyRefereeChoised" (click)="designa(item.id)">Designa</button>
+         </div>
+      </mat-card-actions>
+   </mat-card>
+
+</ng-container>
+

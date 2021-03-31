@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+.referee-card {
+  width: 49%;
+  display: inline-block;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.referee-card:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+.referee-header-image {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.referee-list-item {
+  min-width: 5.5em;
+  display: inline-block;
+  font-weight: 500;
+}
+
+mat-card-header {
+  display: block;
+}
+
+:host /deep/ .mat-card-header-text {
+  margin: 0;
+}
+
+.no-accapo {
+  white-space: nowrap;
+}
+
+.aggiungi-arbitro {
+  margin: 30px 0;
+}
+
+mat-card-actions button {
+  margin: 10px 0 0;
+}
+
+@media only screen and (min-width: 700px) {
+  .referee-card {
+    width: 32%;
+  }
+
+  .referee-card:nth-of-type(2n) {
+    margin-right: 2%;
+  }
+
+  .referee-card:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  mat-card-header {
+    display: flex;
+  }
+
+  :host /deep/ .mat-card-header-text {
+    margin-left: 5px;
+  }
+
+  #button-designa {
+    display: inline-block;
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .referee-card {
+    width: 24.25%;
+  }
+
+  .referee-card:nth-of-type(n) {
+    margin-right: 1%;
+  }
+
+  .referee-card:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}

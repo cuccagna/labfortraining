@@ -1,0 +1,29 @@
+ul{
+   margin-top:1em;
+}
+
+ul li{
+   float:left;
+}
+
+ul li a{
+   color: white;
+   font-weight:bold;
+   font-size:1.3em;
+   text-decoration:none;
+   display:block;
+   cursor:pointer;
+   font-style:italic;
+   padding:0.5em;
+   box-sizing:border-box;
+   border-right:1px solid white;
+}
+
+ul li:last-of-type a{
+   border-right:none;
+}
+
+ul li a:hover{
+   text-decoration:underline;
+   text-decoration-style: dotted;
+}
