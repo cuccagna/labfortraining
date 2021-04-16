@@ -1,0 +1,53 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+h1::selection {
+   background: variables.$colore;
+}
+
+body {
+   margin: 20px;
+   padding: 0;
+   font-family: variables.$main-font;
+   line-height: 150%;
+}
+
+h1 {
+   line-height: 100%;
+}
+
+img {
+   border: 2px solid red;
+}
+
+#pageBody {
+   display: grid;
+   max-width: 1200px;
+   margin: 0 auto;
+   grid-template-columns: 65% 20% 15%;
+   grid-template-areas: "mainContent sidebar navbar";
+}
+
+#header,
+#nav,
+#footer,
+h1,
+h2,
+h3 {
+   font-family: variables.$headers-font;
+}
+
+#content {
+   grid-area: mainContent;
+   @include mixins.layout-disposition(left, 65%);
+   margin: 0 0 variables.$space-between-components 0;
+   padding: 0;
+   text-shadow: 0 1px 1px #fff;
+
+   .inner {
+      margin-right: variables.$space-between-components;
+      padding: variables.$inner-padding;
+      color: variables.$main-text-color;
+      background: #e0e4cc;
+   }
+}

@@ -1,0 +1,37 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+#nav {
+   grid-area: navbar;
+   @include mixins.layout-disposition(right, 15%);
+   @extend %zero-padding-margin;
+
+   ul {
+      margin: 0;
+      padding: 20px;
+      list-style: none;
+      color: variables.$main-text-color;
+      background: #a7dbd8;
+      overflow: hidden;
+   }
+
+   li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      &:last-child {
+         border-bottom: none;
+      }
+   }
+
+   a {
+      display: block;
+      color: variables.$link-color;
+      text-decoration: none;
+      padding: 10px 0 10px 10px;
+      font-weight: bold;
+
+      &:hover {
+         background: #bce5e3;
+      }
+   }
+}

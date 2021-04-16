@@ -1,0 +1,33 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+#header {
+   width: 100%;
+   @extend %zero-padding-margin;
+
+   .inner {
+      margin: 0 0 variables.$space-between-components 0;
+      padding: variables.$inner-padding;
+      color: variables.$second-text-color;
+
+      /*background: #F38630;  */
+      @include mixins.linear-gradient(
+         (0% 44% 100%),
+         (#c9de96 #8ab66b #398235),
+         135deg
+      );
+   }
+
+   a {
+      display: block;
+      float: right;
+      color: variables.$link-color;
+      font-weight: normal;
+      font-size: 80%;
+   }
+
+   h2 {
+      text-shadow: 0 1px 1px #333;
+   }
+}

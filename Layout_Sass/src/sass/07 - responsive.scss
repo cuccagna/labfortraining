@@ -1,0 +1,21 @@
+/*
+Utilizzare:
+    Variabili
+    Nesting
+    Parent Selector
+    Partial files
+    Extend
+    Mixin
+    Placeholder
+    Media query
+*/
+
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'components/home';
+@use 'layout/header';
+@use 'layout/sidebar';
+@use 'layout/navbar';
+@use 'layout/footer';
+@use 'mediaquery/mediaquery';
+@use 'backwardCompatibility/supports';

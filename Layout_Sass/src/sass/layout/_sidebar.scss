@@ -1,0 +1,17 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+#sidebar {
+   grid-area: sidebar;
+   @include mixins.layout-disposition(right, 20%);
+   @extend %zero-padding-margin;
+
+   .inner {
+      margin-right: variables.$space-between-components;
+      padding: variables.$inner-padding;
+      color: variables.$second-text-color;
+      background: #69d2e7;
+      font-size: 85%;
+   }
+}

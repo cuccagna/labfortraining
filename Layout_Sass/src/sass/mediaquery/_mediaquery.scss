@@ -1,0 +1,107 @@
+@use '../abstracts/variables';
+
+/* Se la larghezza della viewport <= 1024 pixels ... */
+
+@media screen and (max-width: variables.$large-media) {
+   #pageBody {
+      grid-template-columns: 75% 25%;
+
+      grid-template-areas:
+         "mainContent navbar"
+         "mainContent sidebar"
+         "mainContent ...";
+   }
+
+   #content {
+      width: 75%;
+   }
+
+   #nav,
+   #sidebar {
+      width: 25%;
+   }
+
+   /* Aggiusta i margini della sidebar */
+
+   #sidebar .inner {
+      margin-right: 0;
+      margin-top: variables.$space-between-components;
+   }
+}
+
+/* Se la larghezza della viewport <= 768 pixels ... */
+
+@media screen and (max-width: variables.$medium-media) {
+   #pageBody {
+      grid-template-columns: 100%;
+      grid-template-areas:
+         "navbar"
+         "mainContent"
+         "sidebar";
+   }
+
+   #content,
+   #nav,
+   #sidebar {
+      width: 100%;
+   }
+
+   #content .inner {
+      margin-right: 0;
+   }
+
+   #nav {
+      margin-bottom: variables.$space-between-components;
+
+      li {
+         float: left;
+         width: 24%;
+         border-bottom: none;
+         border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+         &:last-child {
+            width: 27%;
+            border-right: none;
+         }
+      }
+
+      a {
+         text-align: center;
+         padding-left: 0;
+      }
+   }
+
+   #sidebar {
+      margin: 0 0 variables.$space-between-components;
+      .inner {
+         margin-top: 0px;
+      }
+   }
+}
+
+/* Se la larghezza della viewport <= 480 pixels ... */
+
+@media screen and (max-width: variables.$small-media) {
+   body {
+      margin: 0;
+   }
+
+   #header .inner {
+      padding-top: 5px;
+   }
+
+   #header .inner,
+   #content,
+   #nav,
+   #sidebar {
+      margin-bottom: 5px;
+   }
+
+   #sidebar .inner {
+      margin-top: 0;
+   }
+
+   #nav ul {
+      padding: 5px 7px;
+   }
+}

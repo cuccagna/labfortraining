@@ -1,0 +1,268 @@
+/*
+Utilizzare:
+    Variabili
+    Nesting
+    Parent Selector
+    Partial files
+    Extend
+    Mixin
+    Placeholder
+    Media query
+*/
+h1::selection {
+  background: red;
+}
+
+body {
+  margin: 20px;
+  padding: 0;
+  font-family: "Georgia", serif;
+  line-height: 150%;
+}
+
+h1 {
+  line-height: 100%;
+}
+
+img {
+  border: 2px solid red;
+}
+
+#pageBody {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 65% 20% 15%;
+  grid-template-areas: "mainContent sidebar navbar";
+}
+
+#header,
+#nav,
+#footer,
+h1,
+h2,
+h3 {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+#header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#header .inner {
+  margin: 0 0 20px 0;
+  padding: 20px;
+  color: #fff;
+  /*background: #F38630;  */
+  background: #c9de96;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #c9de96), color-stop(44%, #8ab66b), color-stop(100%, #398235));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#c9de96", endColorstr="#398235",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+#header a {
+  display: block;
+  float: right;
+  color: #fff;
+  font-weight: normal;
+  font-size: 80%;
+}
+
+#header h2 {
+  text-shadow: 0 1px 1px #333;
+}
+
+#content {
+  grid-area: mainContent;
+  float: left;
+  width: 65%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-shadow: 0 1px 1px #fff;
+}
+
+#content .inner {
+  margin-right: 20px;
+  padding: 20px;
+  color: #333;
+  background: #e0e4cc;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  float: right;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+#sidebar .inner {
+  margin-right: 20px;
+  padding: 20px;
+  color: #fff;
+  background: #69d2e7;
+  font-size: 85%;
+}
+
+#nav {
+  grid-area: navbar;
+  float: right;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  color: #333;
+  background: #a7dbd8;
+  overflow: hidden;
+}
+
+#nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#nav li:last-child {
+  border-bottom: none;
+}
+
+#nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0 10px 10px;
+  font-weight: bold;
+}
+
+#nav a:hover {
+  background: #bce5e3;
+}
+
+#footer {
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #fa6900;
+}
+
+#footer .inner {
+  padding: 5px 20px;
+}
+
+/* Se la larghezza della viewport <= 1024 pixels ... */
+@media screen and (max-width: 1024px) {
+  #pageBody {
+    grid-template-columns: 75% 25%;
+    grid-template-areas: "mainContent navbar" "mainContent sidebar" "mainContent ...";
+  }
+
+  #content {
+    width: 75%;
+  }
+
+  #nav,
+#sidebar {
+    width: 25%;
+  }
+
+  /* Aggiusta i margini della sidebar */
+  #sidebar .inner {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
+/* Se la larghezza della viewport <= 768 pixels ... */
+@media screen and (max-width: 768px) {
+  #pageBody {
+    grid-template-columns: 100%;
+    grid-template-areas: "navbar" "mainContent" "sidebar";
+  }
+
+  #content,
+#nav,
+#sidebar {
+    width: 100%;
+  }
+
+  #content .inner {
+    margin-right: 0;
+  }
+
+  #nav {
+    margin-bottom: 20px;
+  }
+
+  #sidebar {
+    margin: 0 0 20px;
+  }
+
+  #sidebar .inner {
+    margin-top: 0px;
+  }
+
+  #nav li {
+    float: left;
+    width: 24%;
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  #nav li:last-child {
+    width: 27%;
+    border-right: none;
+  }
+
+  #nav a {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+/* Se la larghezza della viewport <= 480 pixels ... */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0;
+  }
+
+  #header .inner {
+    padding-top: 5px;
+  }
+
+  #header .inner,
+#content,
+#nav,
+#sidebar {
+    margin-bottom: 5px;
+  }
+
+  #sidebar .inner {
+    margin-top: 0;
+  }
+
+  #nav ul {
+    padding: 5px 7px;
+  }
+}
+@supports (display: grid) {
+  #pageBody > * {
+    width: auto;
+  }
+}

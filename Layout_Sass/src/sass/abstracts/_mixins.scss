@@ -1,0 +1,95 @@
+@use 'sass:list';
+@use 'sass:string';
+
+$-vendors: -moz-, "-", -webkit-, -o-, -ms-;
+
+@function -colorStop-other-syntax($colorStop-List, $colorList) {
+   $colorStop-otherSyntaxElaborated: "";
+   $augmentedSublist: "";
+   $colorStop-otherSyntax: list.zip($colorStop-List, $colorList);
+
+   @each $sublist in $colorStop-otherSyntax {
+      $counter: 0;
+      @each $col in $sublist {
+         $counter: $counter + 1;
+         @if $counter == 1 {
+            $augmentedSublist: "color-stop( #{$col} , ";
+         } @else {
+            $augmentedSublist: "#{$augmentedSublist} #{$col}),";
+         }
+      }
+      $colorStop-otherSyntaxElaborated: "#{$colorStop-otherSyntaxElaborated} #{$augmentedSublist}";
+   }
+
+   //Tolgo la virgola finale
+   $colorStop-otherSyntaxElaborated: #{string.slice(
+         $colorStop-otherSyntaxElaborated,
+         1,
+         string.length($colorStop-otherSyntaxElaborated)-1
+      )};
+
+   @return $colorStop-otherSyntaxElaborated;
+}
+
+@mixin linear-gradient($colorStop-List, $colorList, $new-direction) {
+   $colorStop-colors-elaboratedList: null;
+   $colorStop-otherSyntax: null;
+   $colorStop-otherSyntaxElaborated: "";
+   $start-color: list.nth($colorList, 1);
+   $end-color: list.nth($colorList, list.length($colorList));
+
+   $colorStop-colors-elaboratedList: list.zip($colorList, $colorStop-List);
+
+   $colorStop-otherSyntaxElaborated: -colorStop-other-syntax(
+      $colorStop-List,
+      $colorList
+   );
+
+   @include -calculate-linear-gradient(
+      $colorStop-colors-elaboratedList,
+      $colorStop-otherSyntaxElaborated,
+      $new-direction,
+      $start-color,
+      $end-color
+   );
+}
+
+@mixin -calculate-linear-gradient(
+   $colorStop-colors-elaboratedList,
+   $colorStop-otherSyntaxElaborated,
+   $new-direction,
+   $start-color,
+   $end-color
+) {
+   $old-direction: 90deg - $new-direction;
+
+   background: $start-color; /* Old browsers */
+
+   //webkit-gradient dovrebbe essere ulteriormente gestito in base alla direzione passata. Qui invece è statico
+   @each $vendor in $-vendors {
+      @if $vendor == "-" {
+         background: #{$vendor}webkit-gradient(
+               linear,
+               left top,
+               right bottom,
+               $colorStop-otherSyntaxElaborated
+            );
+      } @else {
+         background: #{$vendor}linear-gradient(
+               $old-direction,
+               #{$colorStop-colors-elaboratedList}
+            );
+      }
+   }
+
+   background: linear-gradient(
+      $new-direction,
+      #{$colorStop-colors-elaboratedList}
+   );
+   filter: #{"progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=1 )"}; /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin layout-disposition($float, $width) {
+   float: $float;
+   width: $width;
+}
