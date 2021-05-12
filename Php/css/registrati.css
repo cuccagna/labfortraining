@@ -1,0 +1,13 @@
+#registrati-file {
+   border: 1px solid red !important;
+}
+
+.error {
+   background-color: yellow;
+
+   border: 1px solid red;
+}
+
+.testoRosso {
+   color: red;
+}
